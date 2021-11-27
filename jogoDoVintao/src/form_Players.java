@@ -21,7 +21,7 @@ public class form_Players extends javax.swing.JFrame {
         lblAttPeter.setText("Miranha");
         lblAttXico.setText("Sorte");
         AttRafa.setText("Inteligência");
-        setOpacity(0.95f);
+        setOpacity(0.98f);
         setLocationRelativeTo(null);
     }
 
