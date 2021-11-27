@@ -20,7 +20,7 @@ public static final String VERSAONOVA = "1";
         Container fContainer = getContentPane();
         fContainer.setBackground(Color.DARK_GRAY);
         fContainer.setForeground(Color.WHITE);
-        setOpacity(0.95f);
+        setOpacity(0.98f);
         setLocationRelativeTo(null);
     }
 
