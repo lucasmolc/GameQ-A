@@ -51,7 +51,7 @@ public class mainForm extends javax.swing.JFrame {
         setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         setFont(new java.awt.Font("Segoe UI", 0, 10)); // NOI18N
 
-        telaLateral.setBackground(new java.awt.Color(241, 246, 248));
+        telaLateral.setBackground(new java.awt.Color(212, 215, 218));
         telaLateral.setForeground(new java.awt.Color(241, 246, 248));
         telaLateral.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -67,31 +67,31 @@ public class mainForm extends javax.swing.JFrame {
         telaLateral.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 290, -1, 74));
 
         jLabel2.setForeground(new java.awt.Color(15, 15, 15));
-        jLabel2.setText("SELECIONE JOGADOR 1");
-        telaLateral.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 40, 160, 40));
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/selecionePlayer1.png"))); // NOI18N
+        telaLateral.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 40, 170, -1));
 
-        jButton1.setText("jButton1");
+        jButton1.setText("Lula");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
             }
         });
-        telaLateral.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 110, -1, -1));
+        telaLateral.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 110, 80, -1));
 
-        jButton6.setText("jButton6");
+        jButton6.setText("Bolsonaro");
         telaLateral.add(jButton6, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 110, -1, -1));
 
-        jButton7.setText("jButton7");
-        telaLateral.add(jButton7, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 160, -1, -1));
+        jButton7.setText("Dilma");
+        telaLateral.add(jButton7, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 160, 80, -1));
 
-        jButton8.setText("jButton8");
-        telaLateral.add(jButton8, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 160, -1, -1));
+        jButton8.setText("Temer");
+        telaLateral.add(jButton8, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 160, 90, -1));
 
-        jButton9.setText("jButton9");
-        telaLateral.add(jButton9, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 210, -1, -1));
+        jButton9.setText("Mario ");
+        telaLateral.add(jButton9, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 210, 80, -1));
 
-        jButton10.setText("jButton10");
-        telaLateral.add(jButton10, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 210, 80, -1));
+        jButton10.setText("Rafaela");
+        telaLateral.add(jButton10, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 210, 90, -1));
 
         telaPrincipal.setBackground(new java.awt.Color(89, 134, 173));
         telaPrincipal.setForeground(new java.awt.Color(89, 134, 173));
@@ -111,31 +111,31 @@ public class mainForm extends javax.swing.JFrame {
                 playButtonActionPerformed(evt);
             }
         });
-        telaPrincipal.add(playButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 280, 180, 80));
+        telaPrincipal.add(playButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 280, 170, 80));
 
         jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 36)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(235, 235, 235));
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/title.png"))); // NOI18N
-        telaPrincipal.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 20, 340, 90));
+        telaPrincipal.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 20, 340, 90));
 
         imgPlayer2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/anonimoreformed.png"))); // NOI18N
         imgPlayer2.setEnabled(false);
-        telaPrincipal.add(imgPlayer2, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 150, 170, 220));
+        telaPrincipal.add(imgPlayer2, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 150, 170, 220));
 
         imgPlayer1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/anonimoreformed.png"))); // NOI18N
         imgPlayer1.setEnabled(false);
-        telaPrincipal.add(imgPlayer1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 150, -1, 220));
+        telaPrincipal.add(imgPlayer1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 150, -1, 220));
 
         lblPlayer2.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         lblPlayer2.setText("PLAYER 2");
         lblPlayer2.setEnabled(false);
-        telaPrincipal.add(lblPlayer2, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 370, -1, -1));
+        telaPrincipal.add(lblPlayer2, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 370, -1, -1));
 
         lblPlayer1.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         lblPlayer1.setText("PLAYER 1");
         lblPlayer1.setEnabled(false);
-        telaPrincipal.add(lblPlayer1, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 370, -1, -1));
+        telaPrincipal.add(lblPlayer1, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 370, -1, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -160,7 +160,7 @@ public class mainForm extends javax.swing.JFrame {
 
    
     private void playButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_playButtonActionPerformed
-        new form_Regras().setVisible(true);
+        new instrucoes().setVisible(true);
         dispose();
     }//GEN-LAST:event_playButtonActionPerformed
 
