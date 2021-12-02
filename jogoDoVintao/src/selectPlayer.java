@@ -5,8 +5,9 @@
 
 import javax.swing.JFrame;
 import java.awt.*;
+import static javax.swing.JOptionPane.showMessageDialog;
 
-public class mainForm extends javax.swing.JFrame {
+public class selectPlayer extends javax.swing.JFrame {
    
     public static final String VERSAONOVA = "1";
     public static final String VERSAO = "v" + VERSAONOVA + " 26/11/2021";
@@ -17,7 +18,7 @@ public class mainForm extends javax.swing.JFrame {
         throw new UnsupportedOperationException("Not supported yet."); 
     }
     
-    public mainForm() {
+    public selectPlayer() {
         initComponents();
         setTitle("Jogo do Vintão - " + VERSAO);
         Container fContainer = getContentPane();
@@ -29,6 +30,7 @@ public class mainForm extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        buttonGroup1 = new javax.swing.ButtonGroup();
         telaLateral = new javax.swing.JPanel();
         jButton3 = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
@@ -57,7 +59,7 @@ public class mainForm extends javax.swing.JFrame {
 
         jButton3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/botõesLateraldegrade.png"))); // NOI18N
         jButton3.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        jButton3.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        jButton3.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jButton3.setDefaultCapable(false);
         jButton3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -160,8 +162,7 @@ public class mainForm extends javax.swing.JFrame {
 
    
     private void playButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_playButtonActionPerformed
-        new instrucoes().setVisible(true);
-        dispose();
+          showMessageDialog(null, "Heitor da o bumbum");
     }//GEN-LAST:event_playButtonActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
@@ -183,7 +184,7 @@ public class mainForm extends javax.swing.JFrame {
         
         fContainer.setBackground(Color.DARK_GRAY);
         fContainer.setForeground(Color.WHITE);
-        Font font = Font.createFont(Font.TRUETYPE_FONT, mainForm.class.getResourceAsStream("SegoeUI-VF.ttf"));
+        Font font = Font.createFont(Font.TRUETYPE_FONT, selectPlayer.class.getResourceAsStream("SegoeUI-VF.ttf"));
         fContainer.setFont(font.deriveFont(Font.PLAIN, 9f));
         }
         catch(Exception e)
@@ -192,7 +193,7 @@ public class mainForm extends javax.swing.JFrame {
              
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new mainForm().setVisible(true);
+                new selectPlayer().setVisible(true);
             }
         });
     }
@@ -207,6 +208,7 @@ public class mainForm extends javax.swing.JFrame {
     }
     
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.ButtonGroup buttonGroup1;
     private javax.swing.JLabel imgPlayer1;
     private javax.swing.JLabel imgPlayer2;
     private javax.swing.JButton jButton1;
