@@ -234,7 +234,7 @@ public static final String VERSAONOVA = "1";
     }// </editor-fold>//GEN-END:initComponents
 
     private void playButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_playButtonActionPerformed
-        new instrucoes().setVisible(true);
+        new selectPlayer().setVisible(true);
         dispose();
     }//GEN-LAST:event_playButtonActionPerformed
 
