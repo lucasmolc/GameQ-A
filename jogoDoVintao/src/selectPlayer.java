@@ -5,7 +5,10 @@
 
 import javax.swing.JFrame;
 import java.awt.*;
+import javax.swing.ImageIcon;
 import static javax.swing.JOptionPane.showMessageDialog;
+import java.applet.*;
+
 
 public class selectPlayer extends javax.swing.JFrame {
    
@@ -18,6 +21,11 @@ public class selectPlayer extends javax.swing.JFrame {
         throw new UnsupportedOperationException("Not supported yet."); 
     }
     
+    
+    public void musica(){
+        
+    }
+    
     public selectPlayer() {
         initComponents();
         setTitle("Jogo do Vintão - " + VERSAO);
@@ -26,23 +34,35 @@ public class selectPlayer extends javax.swing.JFrame {
         fContainer.setForeground(Color.WHITE);
         setLocationRelativeTo(null);
     }
+    private void setImg(String path, int btn){
+        ImageIcon image = new ImageIcon(
+                        getClass().getResource(path));
+
+        if (btn==1){ 
+            imgPlayer1.setIcon(image);
+        }
+        else {
+            imgPlayer2.setIcon(image);
+        }
+       
+    }
 
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
         buttonGroup1 = new javax.swing.ButtonGroup();
         telaLateral = new javax.swing.JPanel();
-        jButton3 = new javax.swing.JButton();
-        jLabel2 = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
-        jButton6 = new javax.swing.JButton();
-        jButton7 = new javax.swing.JButton();
-        jButton8 = new javax.swing.JButton();
-        jButton9 = new javax.swing.JButton();
-        jButton10 = new javax.swing.JButton();
+        btnSelecPerso = new javax.swing.JButton();
+        lblSelecione = new javax.swing.JLabel();
+        btnLula = new javax.swing.JButton();
+        btnBolsonaro = new javax.swing.JButton();
+        btnDilma = new javax.swing.JButton();
+        btnTemer = new javax.swing.JButton();
+        btnTrump = new javax.swing.JButton();
+        btnKim = new javax.swing.JButton();
         telaPrincipal = new javax.swing.JPanel();
-        playButton = new javax.swing.JButton();
-        jLabel1 = new javax.swing.JLabel();
+        btnPlay = new javax.swing.JButton();
+        lblNomedojogo = new javax.swing.JLabel();
         imgPlayer2 = new javax.swing.JLabel();
         imgPlayer1 = new javax.swing.JLabel();
         lblPlayer2 = new javax.swing.JLabel();
@@ -57,43 +77,68 @@ public class selectPlayer extends javax.swing.JFrame {
         telaLateral.setForeground(new java.awt.Color(241, 246, 248));
         telaLateral.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jButton3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/botõesLateraldegrade.png"))); // NOI18N
-        jButton3.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        jButton3.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jButton3.setDefaultCapable(false);
-        jButton3.addActionListener(new java.awt.event.ActionListener() {
+        btnSelecPerso.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/botõesLateraldegrade.png"))); // NOI18N
+        btnSelecPerso.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        btnSelecPerso.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnSelecPerso.setDefaultCapable(false);
+        btnSelecPerso.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton3ActionPerformed(evt);
+                btnSelecPersoActionPerformed(evt);
             }
         });
-        telaLateral.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 290, -1, 74));
+        telaLateral.add(btnSelecPerso, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 290, -1, 74));
 
-        jLabel2.setForeground(new java.awt.Color(15, 15, 15));
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/selecionePlayer1.png"))); // NOI18N
-        telaLateral.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 40, 170, -1));
+        lblSelecione.setForeground(new java.awt.Color(15, 15, 15));
+        lblSelecione.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/selecionePlayer1.png"))); // NOI18N
+        telaLateral.add(lblSelecione, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 40, 170, -1));
 
-        jButton1.setText("Lula");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        btnLula.setText("Lula");
+        btnLula.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                btnLulaActionPerformed(evt);
             }
         });
-        telaLateral.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 110, 80, -1));
+        telaLateral.add(btnLula, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 110, 80, -1));
 
-        jButton6.setText("Bolsonaro");
-        telaLateral.add(jButton6, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 110, -1, -1));
+        btnBolsonaro.setText("Bolsonaro");
+        btnBolsonaro.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnBolsonaroActionPerformed(evt);
+            }
+        });
+        telaLateral.add(btnBolsonaro, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 110, -1, -1));
 
-        jButton7.setText("Dilma");
-        telaLateral.add(jButton7, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 160, 80, -1));
+        btnDilma.setText("Dilma");
+        btnDilma.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnDilmaActionPerformed(evt);
+            }
+        });
+        telaLateral.add(btnDilma, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 160, 80, -1));
 
-        jButton8.setText("Temer");
-        telaLateral.add(jButton8, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 160, 90, -1));
+        btnTemer.setText("Temer");
+        btnTemer.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnTemerActionPerformed(evt);
+            }
+        });
+        telaLateral.add(btnTemer, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 160, 90, -1));
 
-        jButton9.setText("Mario ");
-        telaLateral.add(jButton9, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 210, 80, -1));
+        btnTrump.setText("Trump");
+        btnTrump.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnTrumpActionPerformed(evt);
+            }
+        });
+        telaLateral.add(btnTrump, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 210, 80, -1));
 
-        jButton10.setText("Rafaela");
-        telaLateral.add(jButton10, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 210, 90, -1));
+        btnKim.setText("Kim Jong un");
+        btnKim.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnKimActionPerformed(evt);
+            }
+        });
+        telaLateral.add(btnKim, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 210, 90, -1));
 
         telaPrincipal.setBackground(new java.awt.Color(89, 134, 173));
         telaPrincipal.setForeground(new java.awt.Color(89, 134, 173));
@@ -101,25 +146,25 @@ public class selectPlayer extends javax.swing.JFrame {
         telaPrincipal.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
         telaPrincipal.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        playButton.setBackground(new java.awt.Color(89, 134, 173));
-        playButton.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
-        playButton.setForeground(new java.awt.Color(211, 211, 211));
-        playButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/playtest.png"))); // NOI18N
-        playButton.setText("PLAY");
-        playButton.setBorder(null);
-        playButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        playButton.addActionListener(new java.awt.event.ActionListener() {
+        btnPlay.setBackground(new java.awt.Color(89, 134, 173));
+        btnPlay.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        btnPlay.setForeground(new java.awt.Color(211, 211, 211));
+        btnPlay.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/playtest.png"))); // NOI18N
+        btnPlay.setText("PLAY");
+        btnPlay.setBorder(null);
+        btnPlay.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnPlay.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                playButtonActionPerformed(evt);
+                btnPlayActionPerformed(evt);
             }
         });
-        telaPrincipal.add(playButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 280, 170, 80));
+        telaPrincipal.add(btnPlay, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 280, 170, 80));
 
-        jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 36)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(235, 235, 235));
-        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/title.png"))); // NOI18N
-        telaPrincipal.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 20, 340, 90));
+        lblNomedojogo.setFont(new java.awt.Font("Segoe UI", 1, 36)); // NOI18N
+        lblNomedojogo.setForeground(new java.awt.Color(235, 235, 235));
+        lblNomedojogo.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lblNomedojogo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/title.png"))); // NOI18N
+        telaPrincipal.add(lblNomedojogo, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 20, 340, 90));
 
         imgPlayer2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/anonimoreformed.png"))); // NOI18N
         imgPlayer2.setEnabled(false);
@@ -160,21 +205,61 @@ public class selectPlayer extends javax.swing.JFrame {
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
-   
-    private void playButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_playButtonActionPerformed
-          showMessageDialog(null, "Heitor da o bumbum");
-    }//GEN-LAST:event_playButtonActionPerformed
+             
+        
+    private void btnPlayActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPlayActionPerformed
+          showMessageDialog(null, "");
+    }//GEN-LAST:event_btnPlayActionPerformed
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void btnLulaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLulaActionPerformed
         selectPlayer(player);
-    }//GEN-LAST:event_jButton1ActionPerformed
+        setImg("/imgs/lula.png",1);
+    }//GEN-LAST:event_btnLulaActionPerformed
 
-    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+    private void btnSelecPersoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSelecPersoActionPerformed
         if(selectedPlayer != null && selectedPlayer != ""){
             player = true;
             
         }
-    }//GEN-LAST:event_jButton3ActionPerformed
+        
+    }//GEN-LAST:event_btnSelecPersoActionPerformed
+
+    private void btnBolsonaroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBolsonaroActionPerformed
+       selectPlayer(player);
+       setImg("/imgs/bolsonaro.png",1);
+       
+       
+    }//GEN-LAST:event_btnBolsonaroActionPerformed
+
+    
+    private void btnDilmaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDilmaActionPerformed
+        selectPlayer(player);
+        setImg("/imgs/dilma.png",1);
+        
+    }//GEN-LAST:event_btnDilmaActionPerformed
+
+     
+    private void btnTemerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnTemerActionPerformed
+        selectPlayer(player);
+        setImg("/imgs/temer.png",1);
+        
+        
+        
+    }//GEN-LAST:event_btnTemerActionPerformed
+
+    private void btnTrumpActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnTrumpActionPerformed
+        selectPlayer(player);
+        setImg("/imgs/trump.png",1);
+      
+        
+    
+    }//GEN-LAST:event_btnTrumpActionPerformed
+
+    private void btnKimActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnKimActionPerformed
+        selectPlayer(player);
+        setImg("/imgs/kim.png",1);
+        
+    }//GEN-LAST:event_btnKimActionPerformed
 
     public static void main(String args[]) {
         try{
@@ -208,21 +293,21 @@ public class selectPlayer extends javax.swing.JFrame {
     }
     
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btnBolsonaro;
+    private javax.swing.JButton btnDilma;
+    private javax.swing.JButton btnKim;
+    private javax.swing.JButton btnLula;
+    private javax.swing.JButton btnPlay;
+    private javax.swing.JButton btnSelecPerso;
+    private javax.swing.JButton btnTemer;
+    private javax.swing.JButton btnTrump;
     private javax.swing.ButtonGroup buttonGroup1;
     private javax.swing.JLabel imgPlayer1;
     private javax.swing.JLabel imgPlayer2;
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton10;
-    private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton6;
-    private javax.swing.JButton jButton7;
-    private javax.swing.JButton jButton8;
-    private javax.swing.JButton jButton9;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel lblNomedojogo;
     private javax.swing.JLabel lblPlayer1;
     private javax.swing.JLabel lblPlayer2;
-    private javax.swing.JButton playButton;
+    private javax.swing.JLabel lblSelecione;
     private javax.swing.JPanel telaLateral;
     private javax.swing.JPanel telaPrincipal;
     // End of variables declaration//GEN-END:variables
