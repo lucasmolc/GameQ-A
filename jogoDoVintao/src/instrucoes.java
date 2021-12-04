@@ -4,6 +4,8 @@
  */
 import javax.swing.JFrame;
 import java.awt.*;
+import javax.swing.ImageIcon;
+
 public class instrucoes extends javax.swing.JFrame {
 public static final String VERSAONOVA = "1";
     public static final String VERSAO = "v" + VERSAONOVA + " 26/11/2021";
@@ -28,10 +30,6 @@ public static final String VERSAONOVA = "1";
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
-        jPanel2 = new javax.swing.JPanel();
-        jLabel1 = new javax.swing.JLabel();
-        jPanel3 = new javax.swing.JPanel();
-        instruction4 = new javax.swing.JLabel();
         jPanel4 = new javax.swing.JPanel();
         instruction1 = new javax.swing.JLabel();
         jPanel5 = new javax.swing.JPanel();
@@ -41,63 +39,15 @@ public static final String VERSAONOVA = "1";
         instruction3 = new javax.swing.JLabel();
         instruction6 = new javax.swing.JLabel();
         playButton = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setType(java.awt.Window.Type.POPUP);
 
         jPanel1.setBackground(new java.awt.Color(212, 215, 218));
         jPanel1.setBorder(javax.swing.BorderFactory.createCompoundBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1), null));
+        jPanel1.setForeground(new java.awt.Color(212, 215, 218));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jPanel2.setBackground(new java.awt.Color(89, 134, 173));
-
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/instrucoesSombra.png"))); // NOI18N
-
-        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
-        jPanel2.setLayout(jPanel2Layout);
-        jPanel2Layout.setHorizontalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGap(150, 150, 150)
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 459, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(161, Short.MAX_VALUE))
-        );
-        jPanel2Layout.setVerticalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel2Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, 78, Short.MAX_VALUE)
-                .addContainerGap())
-        );
-
-        jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 10, 770, 90));
-
-        jPanel3.setBackground(new java.awt.Color(145, 153, 163));
-
-        instruction4.setBackground(new java.awt.Color(121, 122, 122));
-        instruction4.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        instruction4.setForeground(new java.awt.Color(255, 255, 255));
-        instruction4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        instruction4.setText("Pressione PLAY para começar!");
-
-        javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
-        jPanel3.setLayout(jPanel3Layout);
-        jPanel3Layout.setHorizontalGroup(
-            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(instruction4, javax.swing.GroupLayout.PREFERRED_SIZE, 514, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(307, 307, 307))
-        );
-        jPanel3Layout.setVerticalGroup(
-            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel3Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(instruction4, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(9, Short.MAX_VALUE))
-        );
-
-        jPanel1.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 350, 520, 50));
 
         jPanel4.setBackground(new java.awt.Color(145, 153, 163));
 
@@ -111,20 +61,20 @@ public static final String VERSAONOVA = "1";
         jPanel4.setLayout(jPanel4Layout);
         jPanel4Layout.setHorizontalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel4Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(instruction1, javax.swing.GroupLayout.PREFERRED_SIZE, 770, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
+            .addGroup(jPanel4Layout.createSequentialGroup()
+                .addGap(15, 15, 15)
+                .addComponent(instruction1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGap(29, 29, 29))
         );
         jPanel4Layout.setVerticalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel4Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(jPanel4Layout.createSequentialGroup()
+                .addContainerGap()
                 .addComponent(instruction1, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        jPanel1.add(jPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 110, 770, 50));
+        jPanel1.add(jPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, 130, 760, 50));
 
         jPanel5.setBackground(new java.awt.Color(145, 153, 163));
 
@@ -160,7 +110,7 @@ public static final String VERSAONOVA = "1";
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        jPanel1.add(jPanel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 170, 770, -1));
+        jPanel1.add(jPanel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, 200, 760, -1));
 
         jPanel6.setBackground(new java.awt.Color(145, 153, 163));
 
@@ -181,48 +131,69 @@ public static final String VERSAONOVA = "1";
         jPanel6Layout.setHorizontalGroup(
             jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel6Layout.createSequentialGroup()
-                .addGap(0, 12, Short.MAX_VALUE)
-                .addComponent(instruction3, javax.swing.GroupLayout.PREFERRED_SIZE, 770, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanel6Layout.createSequentialGroup()
-                    .addContainerGap()
-                    .addComponent(instruction6, javax.swing.GroupLayout.PREFERRED_SIZE, 770, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel6Layout.createSequentialGroup()
+                        .addGap(14, 14, 14)
+                        .addComponent(instruction3, javax.swing.GroupLayout.PREFERRED_SIZE, 691, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel6Layout.createSequentialGroup()
+                        .addGap(96, 96, 96)
+                        .addComponent(instruction6, javax.swing.GroupLayout.PREFERRED_SIZE, 552, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(45, Short.MAX_VALUE))
         );
         jPanel6Layout.setVerticalGroup(
             jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel6Layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(instruction3)
-                .addContainerGap(39, Short.MAX_VALUE))
-            .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel6Layout.createSequentialGroup()
-                    .addContainerGap(39, Short.MAX_VALUE)
-                    .addComponent(instruction6)
-                    .addContainerGap()))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(instruction6)
+                .addContainerGap(8, Short.MAX_VALUE))
         );
 
-        jPanel1.add(jPanel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 240, 770, 70));
+        jPanel1.add(jPanel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 280, 750, 70));
 
         playButton.setBackground(new java.awt.Color(212, 215, 218));
         playButton.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
-        playButton.setForeground(new java.awt.Color(65, 121, 189));
-        playButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/playtest.png"))); // NOI18N
-        playButton.setText("PLAY");
+        playButton.setForeground(new java.awt.Color(212, 215, 218));
+        playButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/setaButton.png"))); // NOI18N
+        playButton.setAlignmentY(0.0F);
         playButton.setBorder(null);
         playButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        playButton.setFocusPainted(false);
+        playButton.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                playButtonMouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                playButtonMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                playButtonMouseExited(evt);
+            }
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                playButtonMousePressed(evt);
+            }
+            public void mouseReleased(java.awt.event.MouseEvent evt) {
+                playButtonMouseReleased(evt);
+            }
+        });
         playButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 playButtonActionPerformed(evt);
             }
         });
-        jPanel1.add(playButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 330, 220, 70));
+        jPanel1.add(playButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 357, 120, 60));
+
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/instrucoes.png"))); // NOI18N
+        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 840, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 746, Short.MAX_VALUE)
+                .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -237,6 +208,31 @@ public static final String VERSAONOVA = "1";
         new selectPlayer().setVisible(true);
         dispose();
     }//GEN-LAST:event_playButtonActionPerformed
+
+    private void playButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_playButtonMouseClicked
+        ImageIcon II = new ImageIcon(getClass().getResource("/imgs/setaButton.png"));
+        playButton.setIcon(II);
+    }//GEN-LAST:event_playButtonMouseClicked
+
+    private void playButtonMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_playButtonMouseEntered
+        ImageIcon II = new ImageIcon(getClass().getResource("/imgs/setaButtonHover.png"));
+        playButton.setIcon(II);
+    }//GEN-LAST:event_playButtonMouseEntered
+
+    private void playButtonMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_playButtonMouseExited
+        ImageIcon II = new ImageIcon(getClass().getResource("/imgs/setaButton.png"));
+        playButton.setIcon(II);
+    }//GEN-LAST:event_playButtonMouseExited
+
+    private void playButtonMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_playButtonMousePressed
+        ImageIcon II = new ImageIcon(getClass().getResource("/imgs/setaButtonClick.png"));
+        playButton.setIcon(II);
+    }//GEN-LAST:event_playButtonMousePressed
+
+    private void playButtonMouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_playButtonMouseReleased
+        ImageIcon II = new ImageIcon(getClass().getResource("/imgs/setaButtonHover.png"));
+        playButton.setIcon(II);
+    }//GEN-LAST:event_playButtonMouseReleased
 
     
     public static void main(String args[]) {
@@ -276,13 +272,10 @@ public static final String VERSAONOVA = "1";
     private javax.swing.JLabel instruction1;
     private javax.swing.JLabel instruction2;
     private javax.swing.JLabel instruction3;
-    private javax.swing.JLabel instruction4;
     private javax.swing.JLabel instruction5;
     private javax.swing.JLabel instruction6;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JPanel jPanel2;
-    private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
     private javax.swing.JPanel jPanel5;
     private javax.swing.JPanel jPanel6;
