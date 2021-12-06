@@ -1,0 +1,114 @@
+       Jogo do Vintão
+
+OBJETIVOS DO SISTEMA: O Projeto surgiu com o objetivo da criação de um jogo que tenham perguntas e respostas, estimulando o raciocínio do jogador e seu desenvolvimento em conhecimentos gerais, trazendo como benefícios para o mesmo melhor desenvoltura em achar soluções em um curto período de tempo. 
+
+
+EMBASAMENTO. O site https://superaparaescolas.com.br/ implica em sua matéria referente a atividades de estimulação cognitiva, indica que 
+“O objetivo da estimulação cognitiva é incitar a capacidade mental das pessoas. Sendo assim, vale reforçar: investir em atividades de estimulação cognitiva na escola ajuda as crianças e adolescentes, dentre outros aspectos, a:
+• Melhorarem o raciocínio;
+• Trabalharem a memória; 
+• Trabalharem o planejamento e execução de trabalhos ou atividades;
+• Melhorarem a capacidade de resolver problemas;
+• Melhorarem o controle inibitório;
+• Manterem-se mais focados e atentos; 
+• Trabalharem a flexibilidade cognitiva.”
+
+O QUE TEMOS HOJE?
+Hoje, já possuímos alguns jogos relacionados a esse modelo de perguntas e respostas, mas, o jogo do vintão traz uma proposta nova, além de treinar o que os outros jogos já treinam, também proporcionamos uma experiencia ao usuário que outras empresas não são capazes de proporcionar, gerando entretenimento, juntamente com o aprendizado.
+
+
+
+
+
+
+
+
+
+
+
+
+Definições e Siglas
+
+1) Adicionar um link para definições e siglas
+
+
+
+
+
+
+
+
+Cronograma previsto
+5) adicionar um link com o cronograma
+
+
+
+
+
+
+
+
+
+
+Colaboradores
+                     Heitor 
+  - UNA Cristiano Machado
+                  Lucas Mol 
+  - UNA Cristiano Machado
+                      Daniel 
+  - UNA Cristiano Machado
+            Mateus Cambraia
+  - UNA Cristiano Machado
+
+
+
+
+
+Backlog do Produto
+7)..
+
+
+
+
+
+
+
+
+Montar um kanban com ID, Nome, Importância, PH, Demonstrar, Notas (histórias de usuário)
+
+9) ..
+           
+
+
+
+Sprints
+• Definir e descrever os Sprints no Kanban.
+
+
+
+
+
+
+
+
+Diagrama de Casos de uso do sistema.
+
+
+    
+
+
+Diagrama de Classes do sistema.
+
+• Link ou imagem 
+
+
+
+
+
+
+Modelo Entidade Relacionamento da base de     dados do sistema.
+
+
+Modelo Relacional da base de dados do sistema.
+
+
