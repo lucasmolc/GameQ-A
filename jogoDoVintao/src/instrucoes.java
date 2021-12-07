@@ -192,7 +192,7 @@ public static final String VERSAONOVA = "1";
         jPanel1.add(playButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 357, 120, 60));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/instrucoes.png"))); // NOI18N
-        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 840, -1));
+        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, 0, 840, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);

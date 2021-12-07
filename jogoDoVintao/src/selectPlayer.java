@@ -16,8 +16,8 @@ import javax.swing.border.Border;
 
 public class selectPlayer extends javax.swing.JFrame {
    
-    public static final String VERSAONOVA = "1";
-    public static final String VERSAO = "v" + VERSAONOVA + " 26/11/2021";
+    public static final String VERSAONOVA = "2";
+    public static final String VERSAO = "v" + VERSAONOVA + " 06/12/2021";
     public boolean player = false;
     public String firstPlayerSelected = "";
     public String secondPlayerSelected = "";
@@ -129,7 +129,7 @@ public class selectPlayer extends javax.swing.JFrame {
 
         lblSelecione.setForeground(new java.awt.Color(15, 15, 15));
         lblSelecione.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/selectP1.png"))); // NOI18N
-        telaLateral.add(lblSelecione, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 20, 200, -1));
+        telaLateral.add(lblSelecione, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 200, -1));
 
         btnLula.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/lulaButton.png"))); // NOI18N
         btnLula.addMouseListener(new java.awt.event.MouseAdapter() {
