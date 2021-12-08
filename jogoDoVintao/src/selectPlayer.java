@@ -94,6 +94,7 @@ public class selectPlayer extends javax.swing.JFrame {
         setBackground(new java.awt.Color(226, 222, 226));
         setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         setFont(new java.awt.Font("Segoe UI", 0, 10)); // NOI18N
+        setResizable(false);
 
         telaLateral.setBackground(new java.awt.Color(212, 215, 218));
         telaLateral.setForeground(new java.awt.Color(241, 246, 248));
@@ -364,6 +365,9 @@ public class selectPlayer extends javax.swing.JFrame {
     private void btnPlayActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPlayActionPerformed
         if (secondPlayerSelected == null || secondPlayerSelected == "") {
             showMessageDialog(null, "Necessário selecionar os 2 personagens!");
+        } else {
+            new perguntas().setVisible(true);
+            dispose();
         }
     }//GEN-LAST:event_btnPlayActionPerformed
 
