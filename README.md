@@ -1,5 +1,5 @@
 # GameQ-A
-Jogo de Perguntas e Respostas desenvolvido como um projeto para a faculdade.
+Jogo de Perguntas e Respostas desenvolvido como um projeto para a faculdade
 
 <h2 align="center">Jogo do Vintão</h2>
 
