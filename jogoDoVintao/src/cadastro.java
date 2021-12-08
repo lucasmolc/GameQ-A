@@ -1,14 +1,16 @@
-
+import javax.swing.*;
 import java.awt.Color;
 import java.awt.Container;
 import javax.swing.BorderFactory;
 import javax.swing.ImageIcon;
+import static javax.swing.JOptionPane.showMessageDialog;
 import javax.swing.border.Border;
 
 
 public class cadastro extends javax.swing.JFrame {
     public static final String VERSAONOVA = "1";
     public static final String VERSAO = "v" + VERSAONOVA + " 26/11/2021";
+    public boolean player = false;
     public static  Container getContantPane()
             {
         throw new UnsupportedOperationException("Not supported yet.");
@@ -27,6 +29,10 @@ public class cadastro extends javax.swing.JFrame {
         nextCadastro.setOpaque(false);
         nextCadastro.setContentAreaFilled(false);
         nextCadastro.setBorderPainted(false);
+        nextCadastro1.setBorder(bordaVazia);
+        nextCadastro1.setOpaque(false);
+        nextCadastro1.setContentAreaFilled(false);
+        nextCadastro1.setBorderPainted(false);
     }
 
     
@@ -46,6 +52,7 @@ public class cadastro extends javax.swing.JFrame {
         jSeparator3 = new javax.swing.JSeparator();
         txtNome1 = new javax.swing.JTextField();
         txtNome2 = new javax.swing.JTextField();
+        nextCadastro1 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setResizable(false);
@@ -80,11 +87,6 @@ public class cadastro extends javax.swing.JFrame {
         txtNome.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         txtNome.setForeground(new java.awt.Color(54, 57, 63));
         txtNome.setBorder(null);
-        txtNome.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtNomeActionPerformed(evt);
-            }
-        });
         jPanel1.add(txtNome, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 250, 210, 20));
 
         nextCadastro.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/setaButton.png"))); // NOI18N
@@ -112,6 +114,8 @@ public class cadastro extends javax.swing.JFrame {
         });
         jPanel1.add(nextCadastro, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 330, 120, 60));
         jPanel1.add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 170, 210, 10));
+
+        jSeparator2.setToolTipText("");
         jPanel1.add(jSeparator2, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 220, 210, 10));
         jPanel1.add(jSeparator3, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 270, 210, 10));
 
@@ -119,23 +123,39 @@ public class cadastro extends javax.swing.JFrame {
         txtNome1.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         txtNome1.setForeground(new java.awt.Color(54, 57, 63));
         txtNome1.setBorder(null);
-        txtNome1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtNome1ActionPerformed(evt);
-            }
-        });
         jPanel1.add(txtNome1, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 150, 210, 20));
 
         txtNome2.setBackground(new java.awt.Color(212, 215, 218));
         txtNome2.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         txtNome2.setForeground(new java.awt.Color(54, 57, 63));
         txtNome2.setBorder(null);
-        txtNome2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtNome2ActionPerformed(evt);
+        jPanel1.add(txtNome2, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 200, 210, 20));
+
+        nextCadastro1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/setaButton.png"))); // NOI18N
+        nextCadastro1.setEnabled(false);
+        nextCadastro1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                nextCadastro1MouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                nextCadastro1MouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                nextCadastro1MouseExited(evt);
+            }
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                nextCadastro1MousePressed(evt);
+            }
+            public void mouseReleased(java.awt.event.MouseEvent evt) {
+                nextCadastro1MouseReleased(evt);
             }
         });
-        jPanel1.add(txtNome2, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 200, 210, 20));
+        nextCadastro1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                nextCadastro1ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(nextCadastro1, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 330, 120, 60));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -156,15 +176,37 @@ public class cadastro extends javax.swing.JFrame {
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void txtNomeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtNomeActionPerformed
-        
-    }//GEN-LAST:event_txtNomeActionPerformed
-
     private void nextCadastroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nextCadastroActionPerformed
-        new instrucoes().setVisible(true);
-        dispose();
+        if ((txtNome1.getText().isEmpty()) || (txtNome2.getText().isEmpty()) || (txtNome.getText().isEmpty())) {
+            verificaEmpty();
+        }
+        else
+        {
+            nextCadastro.setVisible(false);
+            nextCadastro.setEnabled(false);
+            nextCadastro1.setVisible(true);
+            nextCadastro1.setEnabled(true);
+            txtNome1.setText("");
+            txtNome2.setText("");
+            txtNome.setText("");
+            ImageIcon next = new ImageIcon(getClass().getResource("/imgs/cadastroP2.png"));
+            idCadastro.setIcon(next);
+        }
     }//GEN-LAST:event_nextCadastroActionPerformed
 
+    public void verificaEmpty()
+    {
+        if (txtNome1.getText().isEmpty()) {
+            showMessageDialog(null, "Nome não pode estar vazio!");
+        }
+        if (txtNome2.getText().isEmpty()) {
+            showMessageDialog(null, "E-Mail não pode estar vazio!");
+        }
+        if (txtNome.getText().isEmpty()) {
+            showMessageDialog(null, "Telefone não pode estar vazio!");
+        }
+    }
+    
     private void nextCadastroMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_nextCadastroMouseClicked
         ImageIcon next = new ImageIcon(getClass().getResource("/imgs/setaButton.png"));
         nextCadastro.setIcon(next);
@@ -187,16 +229,43 @@ public class cadastro extends javax.swing.JFrame {
 
     private void nextCadastroMouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_nextCadastroMouseReleased
        ImageIcon next = new ImageIcon(getClass().getResource("/imgs/setaButtonHover.png"));
-        nextCadastro.setIcon(next);
+       nextCadastro.setIcon(next);
     }//GEN-LAST:event_nextCadastroMouseReleased
 
-    private void txtNome1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtNome1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txtNome1ActionPerformed
+    private void nextCadastro1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_nextCadastro1MouseClicked
+        ImageIcon next = new ImageIcon(getClass().getResource("/imgs/setaButton.png"));
+        nextCadastro1.setIcon(next);
+    }//GEN-LAST:event_nextCadastro1MouseClicked
 
-    private void txtNome2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtNome2ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txtNome2ActionPerformed
+    private void nextCadastro1MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_nextCadastro1MouseEntered
+        ImageIcon next = new ImageIcon(getClass().getResource("/imgs/setaButtonHover.png"));
+        nextCadastro1.setIcon(next);
+    }//GEN-LAST:event_nextCadastro1MouseEntered
+
+    private void nextCadastro1MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_nextCadastro1MouseExited
+        ImageIcon next = new ImageIcon(getClass().getResource("/imgs/setaButton.png"));
+        nextCadastro1.setIcon(next);
+    }//GEN-LAST:event_nextCadastro1MouseExited
+
+    private void nextCadastro1MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_nextCadastro1MousePressed
+        ImageIcon next = new ImageIcon(getClass().getResource("/imgs/setaButtonClick.png"));
+        nextCadastro1.setIcon(next);
+    }//GEN-LAST:event_nextCadastro1MousePressed
+
+    private void nextCadastro1MouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_nextCadastro1MouseReleased
+        ImageIcon next = new ImageIcon(getClass().getResource("/imgs/setaButtonHover.png"));
+        nextCadastro1.setIcon(next);
+    }//GEN-LAST:event_nextCadastro1MouseReleased
+
+    private void nextCadastro1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nextCadastro1ActionPerformed
+        if ((txtNome1.getText().isEmpty()) || (txtNome2.getText().isEmpty()) || (txtNome.getText().isEmpty())) {
+            verificaEmpty();
+        }
+        else {
+            new instrucoes().setVisible(true);
+            dispose();
+            }
+    }//GEN-LAST:event_nextCadastro1ActionPerformed
                                     
     
     public static void main(String args[]) {
@@ -238,6 +307,7 @@ public class cadastro extends javax.swing.JFrame {
     private javax.swing.JLabel lblNome;
     private javax.swing.JLabel lblTele;
     private javax.swing.JButton nextCadastro;
+    private javax.swing.JButton nextCadastro1;
     private javax.swing.JTextField txtNome;
     private javax.swing.JTextField txtNome1;
     private javax.swing.JTextField txtNome2;
