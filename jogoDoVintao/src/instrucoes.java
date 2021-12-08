@@ -4,7 +4,9 @@
  */
 import javax.swing.JFrame;
 import java.awt.*;
+import javax.swing.BorderFactory;
 import javax.swing.ImageIcon;
+import javax.swing.border.Border;
 
 public class instrucoes extends javax.swing.JFrame {
 public static final String VERSAONOVA = "1";
@@ -22,6 +24,11 @@ public static final String VERSAONOVA = "1";
         fContainer.setBackground(Color.DARK_GRAY);
         fContainer.setForeground(Color.WHITE);
         setLocationRelativeTo(null);
+        Border bordaVazia= BorderFactory.createEmptyBorder();
+        playButton.setBorder(bordaVazia);
+        playButton.setOpaque(false);
+        playButton.setContentAreaFilled(false);
+        playButton.setBorderPainted(false);
     }
 
     
