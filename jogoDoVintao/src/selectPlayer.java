@@ -7,17 +7,13 @@ import javax.swing.JFrame;
 import java.awt.*;
 import javax.swing.ImageIcon;
 import static javax.swing.JOptionPane.showMessageDialog;
-import java.util.ArrayList;
-import java.util.Arrays;
-import javax.swing.BorderFactory;
-import javax.swing.JButton;
-import javax.swing.border.Border;
+import java.applet.*;
 
 
 public class selectPlayer extends javax.swing.JFrame {
    
-    public static final String VERSAONOVA = "2";
-    public static final String VERSAO = "v" + VERSAONOVA + " 06/12/2021";
+    public static final String VERSAONOVA = "1";
+    public static final String VERSAO = "v" + VERSAONOVA + " 26/11/2021";
     public boolean player = false;
     public String firstPlayerSelected = "";
     public String secondPlayerSelected = "";
@@ -38,23 +34,6 @@ public class selectPlayer extends javax.swing.JFrame {
         fContainer.setBackground(Color.DARK_GRAY);
         fContainer.setForeground(Color.WHITE);
         setLocationRelativeTo(null);
-        ArrayList<JButton> botoes = new ArrayList<JButton>(Arrays.asList(
-          btnBolsonaro,
-          btnDilma,
-          btnKim,
-          btnLula,
-          btnTemer,
-          btnPlay,
-          btnSelecPerso,
-          btnTrump                
-               ));
-         for (JButton btn : botoes) {
-           Border bordaVazia= BorderFactory.createEmptyBorder();
-        btn.setBorder(bordaVazia);
-        btn.setOpaque(false);
-        btn.setContentAreaFilled(false);
-        btn.setBorderPainted(false);           
-           }        
     }
     private void setImg(String path, int btn){
         ImageIcon image = new ImageIcon(
@@ -129,7 +108,7 @@ public class selectPlayer extends javax.swing.JFrame {
 
         lblSelecione.setForeground(new java.awt.Color(15, 15, 15));
         lblSelecione.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/selectP1.png"))); // NOI18N
-        telaLateral.add(lblSelecione, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 200, -1));
+        telaLateral.add(lblSelecione, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 20, 200, -1));
 
         btnLula.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/lulaButton.png"))); // NOI18N
         btnLula.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -383,14 +362,14 @@ public class selectPlayer extends javax.swing.JFrame {
 
     private void btnSelecPersoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSelecPersoActionPerformed
 
-        if ((firstPlayerSelected == null || firstPlayerSelected == "") && (secondPlayerSelected == null || secondPlayerSelected == "")) 
+        if ((firstPlayerSelected == null || firstPlayerSelected == "") || (secondPlayerSelected == null || secondPlayerSelected == "")) 
         {
             showMessageDialog(null, "Necessário selecionar os 2 personagens!");
         }
         else if(firstPlayerSelected != null && firstPlayerSelected != ""){
             if (player == true) {
-                
-                
+                ImageIcon II = new ImageIcon(getClass().getResource("/imgs/selectP2.png"));
+                lblSelecione.setIcon(II);
                 
                 btnBolsonaro.setEnabled(false);
                 btnDilma.setEnabled(false);
@@ -402,9 +381,7 @@ public class selectPlayer extends javax.swing.JFrame {
             }
             else
             {
-            ImageIcon II = new ImageIcon(getClass().getResource("/imgs/selectP2.png"));
             player = true;
-            lblSelecione.setIcon(II);
             }
         }
     }//GEN-LAST:event_btnSelecPersoActionPerformed
@@ -477,203 +454,163 @@ public class selectPlayer extends javax.swing.JFrame {
     }//GEN-LAST:event_btnKimActionPerformed
 
     private void btnPlayMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnPlayMouseClicked
-        ImageIcon Play = new ImageIcon(getClass().getResource("/imgs/playClick.png"));
-        btnPlay.setIcon(Play);
+        
     }//GEN-LAST:event_btnPlayMouseClicked
 
     private void btnPlayMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnPlayMouseEntered
-        ImageIcon Play = new ImageIcon(getClass().getResource("/imgs/playHover.png"));
-        btnPlay.setIcon(Play); 
+        
     }//GEN-LAST:event_btnPlayMouseEntered
 
     private void btnPlayMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnPlayMouseExited
-        ImageIcon Play = new ImageIcon(getClass().getResource("/imgs/playClick.png"));
-        btnPlay.setIcon(Play);
+        
     }//GEN-LAST:event_btnPlayMouseExited
 
     private void btnPlayMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnPlayMousePressed
-        ImageIcon Play = new ImageIcon(getClass().getResource("/imgs/playClick.png"));
-        btnPlay.setIcon(Play);
+        
     }//GEN-LAST:event_btnPlayMousePressed
 
     private void btnPlayMouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnPlayMouseReleased
-        ImageIcon Play = new ImageIcon(getClass().getResource("/imgs/playHover.png"));
-        btnPlay.setIcon(Play);
+        
     }//GEN-LAST:event_btnPlayMouseReleased
 
     private void btnSelecPersoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnSelecPersoMouseClicked
-        ImageIcon Select = new ImageIcon(getClass().getResource("/imgs/btnSelectClick.png"));
-        btnSelecPerso.setIcon(Select);
+        
     }//GEN-LAST:event_btnSelecPersoMouseClicked
 
     private void btnSelecPersoMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnSelecPersoMouseEntered
-        ImageIcon Select = new ImageIcon(getClass().getResource("/imgs/btnSelectHover.png"));
-        btnSelecPerso.setIcon(Select);
+        
     }//GEN-LAST:event_btnSelecPersoMouseEntered
 
     private void btnSelecPersoMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnSelecPersoMouseExited
-        ImageIcon Select = new ImageIcon(getClass().getResource("/imgs/btnSelect.png"));
-        btnSelecPerso.setIcon(Select); 
+        
     }//GEN-LAST:event_btnSelecPersoMouseExited
 
     private void btnSelecPersoMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnSelecPersoMousePressed
-        ImageIcon Select = new ImageIcon(getClass().getResource("/imgs/btnSelectClick.png"));
-        btnSelecPerso.setIcon(Select);
+        
     }//GEN-LAST:event_btnSelecPersoMousePressed
 
     private void btnSelecPersoMouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnSelecPersoMouseReleased
-        ImageIcon Select = new ImageIcon(getClass().getResource("/imgs/btnSelectHover.png"));
-        btnSelecPerso.setIcon(Select);
+        
     }//GEN-LAST:event_btnSelecPersoMouseReleased
 
     private void btnLulaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnLulaMouseClicked
-        ImageIcon Lula = new ImageIcon(getClass().getResource("/imgs/personagens/lulaButtonClick.png"));
-        btnLula.setIcon(Lula);
+        
     }//GEN-LAST:event_btnLulaMouseClicked
 
     private void btnLulaMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnLulaMouseEntered
-        ImageIcon Lula = new ImageIcon(getClass().getResource("/imgs/personagens/lulaButtonHover.png"));
-        btnLula.setIcon(Lula);
+        
     }//GEN-LAST:event_btnLulaMouseEntered
 
     private void btnLulaMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnLulaMousePressed
-        ImageIcon Lula = new ImageIcon(getClass().getResource("/imgs/personagens/lulaButtonClick.png"));
-        btnLula.setIcon(Lula);
+        
     }//GEN-LAST:event_btnLulaMousePressed
 
     private void btnLulaMouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnLulaMouseReleased
-        ImageIcon Lula = new ImageIcon(getClass().getResource("/imgs/personagens/lulaButtonHover.png"));
-        btnLula.setIcon(Lula);
+        
     }//GEN-LAST:event_btnLulaMouseReleased
 
     private void btnLulaMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnLulaMouseExited
-        ImageIcon Lula = new ImageIcon(getClass().getResource("/imgs/personagens/lulaButton.png"));
-        btnLula.setIcon(Lula);
+        
     }//GEN-LAST:event_btnLulaMouseExited
 
     private void btnBolsonaroMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnBolsonaroMouseClicked
-        ImageIcon Bolsonaro = new ImageIcon(getClass().getResource("/imgs/personagens/jairButtonClick.png"));
-        btnBolsonaro.setIcon(Bolsonaro);
+        
     }//GEN-LAST:event_btnBolsonaroMouseClicked
 
     private void btnBolsonaroMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnBolsonaroMouseEntered
-        ImageIcon Bolsonaro = new ImageIcon(getClass().getResource("/imgs/personagens/jairButtonHover.png"));
-        btnBolsonaro.setIcon(Bolsonaro);
+        
     }//GEN-LAST:event_btnBolsonaroMouseEntered
 
     private void btnBolsonaroMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnBolsonaroMouseExited
-        ImageIcon Bolsonaro = new ImageIcon(getClass().getResource("/imgs/personagens/jairButtons.png"));
-        btnBolsonaro.setIcon(Bolsonaro);
+        
     }//GEN-LAST:event_btnBolsonaroMouseExited
 
     private void btnBolsonaroMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnBolsonaroMousePressed
-        ImageIcon Bolsonaro = new ImageIcon(getClass().getResource("/imgs/personagens/jairButtonClick.png"));
-        btnBolsonaro.setIcon(Bolsonaro);
+        
     }//GEN-LAST:event_btnBolsonaroMousePressed
 
     private void btnBolsonaroMouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnBolsonaroMouseReleased
-        ImageIcon Bolsonaro = new ImageIcon(getClass().getResource("/imgs/personagens/jairButtonHover.png"));
-        btnBolsonaro.setIcon(Bolsonaro);
+        
     }//GEN-LAST:event_btnBolsonaroMouseReleased
 
     private void btnDilmaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnDilmaMouseClicked
-        ImageIcon Dilma = new ImageIcon(getClass().getResource("/imgs/personagens/dilmaButtonHoverClick.png"));
-        btnDilma.setIcon(Dilma);
+        
     }//GEN-LAST:event_btnDilmaMouseClicked
 
     private void btnDilmaMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnDilmaMouseEntered
-        ImageIcon Dilma = new ImageIcon(getClass().getResource("/imgs/personagens/dilmaButtonHover.png"));
-        btnDilma.setIcon(Dilma);
+        
     }//GEN-LAST:event_btnDilmaMouseEntered
 
     private void btnDilmaMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnDilmaMouseExited
-        ImageIcon Dilma = new ImageIcon(getClass().getResource("/imgs/personagens/dilmaButton.png"));
-        btnDilma.setIcon(Dilma);
+        
     }//GEN-LAST:event_btnDilmaMouseExited
 
     private void btnDilmaMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnDilmaMousePressed
-        ImageIcon Dilma = new ImageIcon(getClass().getResource("/imgs/personagens/dilmaButtonHoverClick.png"));
-        btnDilma.setIcon(Dilma);
+        
     }//GEN-LAST:event_btnDilmaMousePressed
 
     private void btnDilmaMouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnDilmaMouseReleased
-        ImageIcon Dilma = new ImageIcon(getClass().getResource("/imgs/personagens/dilmaButtonHover.png"));
-        btnDilma.setIcon(Dilma);
+        
     }//GEN-LAST:event_btnDilmaMouseReleased
 
     private void btnTemerMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnTemerMouseClicked
-        ImageIcon Temer = new ImageIcon(getClass().getResource("/imgs/personagens/temerButtonClick.png"));
-        btnTemer.setIcon(Temer);
+        
     }//GEN-LAST:event_btnTemerMouseClicked
 
     private void btnTemerMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnTemerMouseEntered
-        ImageIcon Temer = new ImageIcon(getClass().getResource("/imgs/personagens/temerButtonHover.png"));
-        btnTemer.setIcon(Temer);
+        
     }//GEN-LAST:event_btnTemerMouseEntered
 
     private void btnTemerMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnTemerMouseExited
-        ImageIcon Temer = new ImageIcon(getClass().getResource("/imgs/personagens/temerButton.png"));
-        btnTemer.setIcon(Temer);
+        
     }//GEN-LAST:event_btnTemerMouseExited
 
     private void btnTemerMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnTemerMousePressed
-        ImageIcon Temer = new ImageIcon(getClass().getResource("/imgs/personagens/temerButtonHover.png"));
-        btnTemer.setIcon(Temer);
+        
     }//GEN-LAST:event_btnTemerMousePressed
 
     private void btnTemerMouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnTemerMouseReleased
-        ImageIcon Temer = new ImageIcon(getClass().getResource("/imgs/personagens/temerButtonClick.png"));
-        btnTemer.setIcon(Temer);
+        
     }//GEN-LAST:event_btnTemerMouseReleased
 
     private void btnTrumpMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnTrumpMouseClicked
-        ImageIcon Trump = new ImageIcon(getClass().getResource("/imgs/personagens/trumpButtonClick.png"));
-        btnTrump.setIcon(Trump);
+        
     }//GEN-LAST:event_btnTrumpMouseClicked
 
     private void btnTrumpMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnTrumpMouseEntered
-        ImageIcon Trump = new ImageIcon(getClass().getResource("/imgs/personagens/trumpButtonHover.png"));
-        btnTrump.setIcon(Trump);
+        
     }//GEN-LAST:event_btnTrumpMouseEntered
 
     private void btnTrumpMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnTrumpMouseExited
-        ImageIcon Trump = new ImageIcon(getClass().getResource("/imgs/personagens/trumpButton.png"));
-        btnTrump.setIcon(Trump);
+        
     }//GEN-LAST:event_btnTrumpMouseExited
 
     private void btnTrumpMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnTrumpMousePressed
-        ImageIcon Trump = new ImageIcon(getClass().getResource("/imgs/personagens/trumpButtonHover.png"));
-        btnTrump.setIcon(Trump);
+        
     }//GEN-LAST:event_btnTrumpMousePressed
 
     private void btnTrumpMouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnTrumpMouseReleased
-        ImageIcon Trump = new ImageIcon(getClass().getResource("/imgs/personagens/trumpButtonClick.png"));
-        btnTrump.setIcon(Trump);
+        
     }//GEN-LAST:event_btnTrumpMouseReleased
 
     private void btnKimMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnKimMouseClicked
-        ImageIcon Kim = new ImageIcon(getClass().getResource("/imgs/personagens/kimButtonClick.png"));
-        btnKim.setIcon(Kim);
+        
     }//GEN-LAST:event_btnKimMouseClicked
 
     private void btnKimMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnKimMouseEntered
-        ImageIcon Kim = new ImageIcon(getClass().getResource("/imgs/personagens/kimButtonHover.png"));
-        btnKim.setIcon(Kim);
+        
     }//GEN-LAST:event_btnKimMouseEntered
 
     private void btnKimMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnKimMouseExited
-        ImageIcon Kim = new ImageIcon(getClass().getResource("/imgs/personagens/kimButton.png"));
-        btnKim.setIcon(Kim);
+       
     }//GEN-LAST:event_btnKimMouseExited
 
     private void btnKimMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnKimMousePressed
-        ImageIcon Kim = new ImageIcon(getClass().getResource("/imgs/personagens/kimButtonClick.png"));
-        btnKim.setIcon(Kim);
+        
     }//GEN-LAST:event_btnKimMousePressed
 
     private void btnKimMouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnKimMouseReleased
-        ImageIcon Kim = new ImageIcon(getClass().getResource("/imgs/personagens/kimButtonHover.png"));
-        btnKim.setIcon(Kim);
+        
     }//GEN-LAST:event_btnKimMouseReleased
 
     public static void main(String args[]) {

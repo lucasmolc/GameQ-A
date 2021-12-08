@@ -4,9 +4,7 @@
  */
 import javax.swing.JFrame;
 import java.awt.*;
-import javax.swing.BorderFactory;
 import javax.swing.ImageIcon;
-import javax.swing.border.Border;
 
 public class instrucoes extends javax.swing.JFrame {
 public static final String VERSAONOVA = "1";
@@ -24,11 +22,6 @@ public static final String VERSAONOVA = "1";
         fContainer.setBackground(Color.DARK_GRAY);
         fContainer.setForeground(Color.WHITE);
         setLocationRelativeTo(null);
-        Border bordaVazia= BorderFactory.createEmptyBorder();
-        playButton.setBorder(bordaVazia);
-        playButton.setOpaque(false);
-        playButton.setContentAreaFilled(false);
-        playButton.setBorderPainted(false);
     }
 
     
@@ -192,7 +185,7 @@ public static final String VERSAONOVA = "1";
         jPanel1.add(playButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 357, 120, 60));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/instrucoes.png"))); // NOI18N
-        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, 0, 840, -1));
+        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 840, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
