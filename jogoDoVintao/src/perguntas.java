@@ -1,22 +1,108 @@
 
+import java.util.Arrays;
+import java.lang.reflect.Array;
+import java.util.ArrayList;
+import java.util.Random;
 import javax.swing.BorderFactory;
 import javax.swing.ImageIcon;
 import javax.swing.border.Border;
 
-
 public class perguntas extends javax.swing.JFrame {
 
-    
+    ArrayList<Pergunta> perguntas; 
     public perguntas() {
         initComponents();
-        Border bordaVazia= BorderFactory.createEmptyBorder();
+        Border bordaVazia = BorderFactory.createEmptyBorder();
         nextQuestion.setBorder(bordaVazia);
         nextQuestion.setOpaque(false);
         nextQuestion.setContentAreaFilled(false);
         nextQuestion.setBorderPainted(false);
-    }
-
+        
+        perguntas =  new ArrayList<Pergunta>(Arrays.asList(
+         new Pergunta("Quais são as fases da Lua?",
+                new ArrayList<Alternativa>(Arrays.asList(
+                        new Alternativa("Nova, cheia e superlua", false),
+                        new Alternativa("Penumbral, lunar parcial, lunar total e cheia", false),
+                        new Alternativa("Nova, cheia, minguante e lua de sangue", false),
+                        new Alternativa("Nova, crescente, cheia e minguante", true)))),
+                
+                new Pergunta("Quantos ossos temos no nosso corpo?",
+                new ArrayList<Alternativa>(Arrays.asList(
+                        new Alternativa("126", false),
+                        new Alternativa("18", false),
+                        new Alternativa("206", true),
+                        new Alternativa("300", false)))),
+                
+                new Pergunta("Qual o planeta mais próximo do Sol?",
+                new ArrayList<Alternativa>(Arrays.asList(
+                        new Alternativa("Netuno", false),
+                        new Alternativa("Júpiter", false),
+                        new Alternativa("Mercúrio", true),
+                        new Alternativa("Terra", false)))),
+                
+                new Pergunta("Qual a maior floresta tropical do mundo?",
+                new ArrayList<Alternativa>(Arrays.asList(
+                        new Alternativa("Mata Atlântica", false),
+                        new Alternativa("Pampas", false),
+                        new Alternativa("Floresta Amazônica", true),
+                        new Alternativa("Pantanal", false)))),
+                
+                new Pergunta("Qual o monumento famoso pela sua inclinação?",
+                new ArrayList<Alternativa>(Arrays.asList(
+                        new Alternativa("Torre Eiffel", false),
+                        new Alternativa("Torre de Pisa", true),
+                        new Alternativa(" Esfinge", false),
+                        new Alternativa("Estátua da Liberdade", false)))),
+                
+                new Pergunta("Quem pintou Mona Lisa?",
+                new ArrayList<Alternativa>(Arrays.asList(
+                        new Alternativa("Leonardo da Vinci", true),
+                        new Alternativa("Van Gogh", false),
+                        new Alternativa("Salvador Dalí", false),
+                        new Alternativa("Tarsila do Amaral", false)))),
+                
+                new Pergunta("O que representam os cinco anéis olímpicos?",
+                new ArrayList<Alternativa>(Arrays.asList(
+                        new Alternativa("As argolas da ginástica artística.", false),
+                        new Alternativa(" As partes do mundo unidas pelo Olimpismo.", true),
+                        new Alternativa("Cinco tipos de esporte: de rede, de campo, de combate, de precisão, de invasão.", false),
+                        new Alternativa("Cinco deuses do Olimpo: Zeus, Atena, Apolo, Dionísio e Hermes.", false)))), 
+                
+                new Pergunta("As pessoas de qual tipo sanguíneo são consideradas doadores universais?",
+                new ArrayList<Alternativa>(Arrays.asList(
+                        new Alternativa("Tipo A", false),
+                        new Alternativa("Tipo B", false),
+                        new Alternativa("Tipo O", true),
+                        new Alternativa("Tipo AB", false)))),
+                
+                new Pergunta("Em que século o continente europeu foi devastado pela peste bubônica?",
+                new ArrayList<Alternativa>(Arrays.asList(
+                        new Alternativa("No século X", false),
+                        new Alternativa("No século XI", false),
+                        new Alternativa("No século XII", false),
+                        new Alternativa("No século XIV", true)))),
+                
+                new Pergunta("Quantos graus são necessários para que dois ângulos sejam complementares?",
+                new ArrayList<Alternativa>(Arrays.asList(
+                        new Alternativa("45", false),
+                        new Alternativa("60", false),
+                        new Alternativa("90", true),
+                        new Alternativa("180", false))))        
+        ));
+        proxQuestao();        
+        }
     
+    void proxQuestao(){
+        int rand = new Random().nextInt(perguntas.size());
+        Pergunta atual = perguntas.get(rand);
+        lblPergunta.setText(atual.texto);
+        btnAlt1.setText(atual.alternativas.get(0).texto);
+        btnAlt2.setText(atual.alternativas.get(1).texto);
+        btnAlt3.setText(atual.alternativas.get(2).texto);
+        btnAlt4.setText(atual.alternativas.get(3).texto);  
+    }
+   
+
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
@@ -25,11 +111,11 @@ public class perguntas extends javax.swing.JFrame {
         jPanel1 = new javax.swing.JPanel();
         btnAlt4 = new javax.swing.JRadioButton();
         btnAlt1 = new javax.swing.JRadioButton();
+        lblPergunta = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
         btnAlt2 = new javax.swing.JRadioButton();
         btnAlt3 = new javax.swing.JRadioButton();
         pnlHab = new javax.swing.JPanel();
-        lblPergunta = new javax.swing.JLabel();
         nextQuestion = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -49,6 +135,12 @@ public class perguntas extends javax.swing.JFrame {
         btnAlt1.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         btnAlt1.setText("Nova, cheia e superlua");
         jPanel1.add(btnAlt1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 180, 430, 40));
+
+        lblPergunta.setFont(new java.awt.Font("Segoe UI", 1, 20)); // NOI18N
+        lblPergunta.setForeground(new java.awt.Color(255, 255, 255));
+        lblPergunta.setText("As pessoas de qual tipo sanguíneo são consideradas doadores universais?");
+        jPanel1.add(lblPergunta, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 750, 120));
+        lblPergunta.getAccessibleContext().setAccessibleName("");
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/telaPerguntas.png"))); // NOI18N
         jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -10, 770, 180));
@@ -80,9 +172,6 @@ public class perguntas extends javax.swing.JFrame {
         );
 
         jPanel1.add(pnlHab, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 180, 270, 150));
-
-        lblPergunta.setText("As pessoas de qual tipo sanguíneo são consideradas doadores universais?");
-        jPanel1.add(lblPergunta, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 10, 560, 120));
 
         nextQuestion.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/setaButton.png"))); // NOI18N
         nextQuestion.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -145,7 +234,7 @@ public class perguntas extends javax.swing.JFrame {
     }//GEN-LAST:event_nextQuestionMouseReleased
 
     public static void main(String args[]) {
-        
+
         try {
             for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
                 if ("Nimbus".equals(info.getName())) {
@@ -162,10 +251,7 @@ public class perguntas extends javax.swing.JFrame {
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
             java.util.logging.Logger.getLogger(perguntas.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
-        
-        
 
-        
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 new perguntas().setVisible(true);
