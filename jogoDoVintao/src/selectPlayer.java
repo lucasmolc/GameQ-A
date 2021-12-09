@@ -1,6 +1,7 @@
-/***
- * 
- * 
+
+/** *
+ *
+ *
  */
 
 import javax.swing.JFrame;
@@ -13,24 +14,22 @@ import javax.swing.BorderFactory;
 import javax.swing.JButton;
 import javax.swing.border.Border;
 
-
 public class selectPlayer extends javax.swing.JFrame {
-   
+
     public static final String VERSAONOVA = "1";
     public static final String VERSAO = "v" + VERSAONOVA + " 26/11/2021";
     public boolean player = false;
     public String firstPlayerSelected = "";
     public String secondPlayerSelected = "";
-    public static  Container getContantPane() 
-    {
-        throw new UnsupportedOperationException("Not supported yet."); 
+
+    public static Container getContantPane() {
+        throw new UnsupportedOperationException("Not supported yet.");
     }
-    
-    
-    public void musica(){
+
+    public void musica() {
 
     }
-    
+
     public selectPlayer() {
         initComponents();
         setTitle("Jogo do Vintão - " + VERSAO);
@@ -39,34 +38,34 @@ public class selectPlayer extends javax.swing.JFrame {
         fContainer.setForeground(Color.WHITE);
         setLocationRelativeTo(null);
         ArrayList<JButton> botoes = new ArrayList<JButton>(Arrays.asList(
-          btnBolsonaro,
-          btnDilma,
-          btnKim,
-          btnLula,
-          btnTemer,
-          btnPlay,
-          btnSelecPerso,
-          btnTrump                
-               ));
-         for (JButton btn : botoes) {
-           Border bordaVazia= BorderFactory.createEmptyBorder();
-        btn.setBorder(bordaVazia);
-        btn.setOpaque(false);
-        btn.setContentAreaFilled(false);
-        btn.setBorderPainted(false);           
-           }        
-    }
-    private void setImg(String path, int btn){
-        ImageIcon image = new ImageIcon(
-                        getClass().getResource(path));
-
-        if (btn==1){ 
-            imgPlayer1.setIcon(image);
+                btnBolsonaro,
+                btnDilma,
+                btnKim,
+                btnLula,
+                btnTemer,
+                btnPlay,
+                btnSelecPerso,
+                btnTrump
+        ));
+        for (JButton btn : botoes) {
+            Border bordaVazia = BorderFactory.createEmptyBorder();
+            btn.setBorder(bordaVazia);
+            btn.setOpaque(false);
+            btn.setContentAreaFilled(false);
+            btn.setBorderPainted(false);
         }
-        else {
+    }
+
+    private void setImg(String path, int btn) {
+        ImageIcon image = new ImageIcon(
+                getClass().getResource(path));
+
+        if (btn == 1) {
+            imgPlayer1.setIcon(image);
+        } else {
             imgPlayer2.setIcon(image);
         }
-       
+
     }
 
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
@@ -360,10 +359,9 @@ public class selectPlayer extends javax.swing.JFrame {
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
-             
-        
+
     private void btnPlayActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPlayActionPerformed
-        if (secondPlayerSelected == null || secondPlayerSelected == "") {
+        if (getSecondPlayerSelected() == null || getSecondPlayerSelected() == "") {
             showMessageDialog(null, "Necessário selecionar os 2 personagens!");
         } else {
             new perguntas().setVisible(true);
@@ -374,28 +372,24 @@ public class selectPlayer extends javax.swing.JFrame {
     private void btnLulaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLulaActionPerformed
         if (player == false) {
             firstPlayerSelected = "lula";
+            setFirstPlayerSelected("lula");
             selectPlayer(player);
-            setImg("/imgs/personagens/lula.png",1);
-        }
-        else {
+            setImg("/imgs/personagens/lula.png", 1);
+        } else {
             secondPlayerSelected = "lula";
+            setSecondPlayerSelected("lula");
             selectPlayer(player);
-            setImg("/imgs/personagens/lula.png",2);
+            setImg("/imgs/personagens/lula.png", 2);
         }
-        
+
     }//GEN-LAST:event_btnLulaActionPerformed
 
     private void btnSelecPersoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSelecPersoActionPerformed
 
-        if ((firstPlayerSelected == null || firstPlayerSelected == "") && (secondPlayerSelected == null || secondPlayerSelected == "")) 
-        {
+        if ((getFirstPlayerSelected() == null || getFirstPlayerSelected() == "") && (getSecondPlayerSelected() == null || getSecondPlayerSelected() == "")) {
             showMessageDialog(null, "Necessário selecionar os 2 personagens!");
-        }
-        else if(firstPlayerSelected != null && firstPlayerSelected != ""){
+        } else if (getFirstPlayerSelected() != null && getFirstPlayerSelected() != "") {
             if (player == true) {
-                
-                
-                
                 btnBolsonaro.setEnabled(false);
                 btnDilma.setEnabled(false);
                 btnKim.setEnabled(false);
@@ -403,80 +397,75 @@ public class selectPlayer extends javax.swing.JFrame {
                 btnTemer.setEnabled(false);
                 btnTrump.setEnabled(false);
                 btnSelecPerso.setEnabled(false);
-            }
-            else
-            {
-            ImageIcon II = new ImageIcon(getClass().getResource("/imgs/selectP2.png"));
-            player = true;
-            lblSelecione.setIcon(II);
+            } else {
+                ImageIcon II = new ImageIcon(getClass().getResource("/imgs/selectP2.png"));
+                player = true;
+                lblSelecione.setIcon(II);
             }
         }
     }//GEN-LAST:event_btnSelecPersoActionPerformed
 
     private void btnBolsonaroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBolsonaroActionPerformed
-       if (player == false) {
-           firstPlayerSelected = "bozo";
-           selectPlayer(player);
-           setImg("/imgs/personagens/bolsonaro.png",1);
-       }
-       else {
-           secondPlayerSelected = "bozo";
-           selectPlayer(player);
-           setImg("/imgs/personagens/bolsonaro.png",2);
-       }
+        if (player == false) {
+            firstPlayerSelected = "bozo";
+            setFirstPlayerSelected("bozo");
+            selectPlayer(player);
+            setImg("/imgs/personagens/bolsonaro.png", 1);
+        } else {
+            secondPlayerSelected = "bozo";
+            setSecondPlayerSelected("bozo");
+            selectPlayer(player);
+            setImg("/imgs/personagens/bolsonaro.png", 2);
+        }
     }//GEN-LAST:event_btnBolsonaroActionPerformed
 
-    
+
     private void btnDilmaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDilmaActionPerformed
         if (player == false) {
-            firstPlayerSelected = "dilma";
+            setFirstPlayerSelected("dilma");
             selectPlayer(player);
-            setImg("/imgs/personagens/dilma.png",1);
-        }
-        else {
-            secondPlayerSelected = "dilma";
+            setImg("/imgs/personagens/dilma.png", 1);
+        } else {
+            setSecondPlayerSelected("dilma");
             selectPlayer(player);
-            setImg("/imgs/personagens/dilma.png",2);
+            setImg("/imgs/personagens/dilma.png", 2);
         }
     }//GEN-LAST:event_btnDilmaActionPerformed
 
-     
+
     private void btnTemerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnTemerActionPerformed
         if (player == false) {
-            firstPlayerSelected = "temer";
+            setFirstPlayerSelected("temer");
             selectPlayer(player);
-            setImg("/imgs/personagens/temer.png",1);
-        }
-        else {
-            secondPlayerSelected = "temer";
+            setImg("/imgs/personagens/temer.png", 1);
+        } else {
+            setSecondPlayerSelected("temer");
             selectPlayer(player);
-            setImg("/imgs/personagens/temer.png",2);
+            setImg("/imgs/personagens/temer.png", 2);
         }
     }//GEN-LAST:event_btnTemerActionPerformed
 
     private void btnTrumpActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnTrumpActionPerformed
         if (player == false) {
-            firstPlayerSelected = "trump";
+            setFirstPlayerSelected("trump");
             selectPlayer(player);
-            setImg("/imgs/personagens/trump.png",1);
-        }
-        else {
-            secondPlayerSelected = "trump";
+            setImg("/imgs/personagens/trump.png", 1);
+        } else {
+            setSecondPlayerSelected("trump");
             selectPlayer(player);
-            setImg("/imgs/personagens/trump.png",2);
+            setImg("/imgs/personagens/trump.png", 2);
         }
     }//GEN-LAST:event_btnTrumpActionPerformed
 
     private void btnKimActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnKimActionPerformed
         if (player == false) {
-            firstPlayerSelected = "kim";
+            setFirstPlayerSelected("kim");
             selectPlayer(player);
-            setImg("/imgs/personagens/kim.png",1);
-        }
-        else {
-            secondPlayerSelected = "kim";
+            setImg("/imgs/personagens/kim.png", 1);
+        } else {
+            setSecondPlayerSelected("kim");
             selectPlayer(player);
-            setImg("/imgs/personagens/kim.png",2);
+            setImg("/imgs/personagens/kim.png", 2);
         }
     }//GEN-LAST:event_btnKimActionPerformed
 
@@ -487,7 +476,7 @@ public class selectPlayer extends javax.swing.JFrame {
 
     private void btnPlayMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnPlayMouseEntered
         ImageIcon Play = new ImageIcon(getClass().getResource("/imgs/playHover.png"));
-        btnPlay.setIcon(Play); 
+        btnPlay.setIcon(Play);
     }//GEN-LAST:event_btnPlayMouseEntered
 
     private void btnPlayMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnPlayMouseExited
@@ -517,7 +506,7 @@ public class selectPlayer extends javax.swing.JFrame {
 
     private void btnSelecPersoMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnSelecPersoMouseExited
         ImageIcon Select = new ImageIcon(getClass().getResource("/imgs/btnSelect.png"));
-        btnSelecPerso.setIcon(Select); 
+        btnSelecPerso.setIcon(Select);
     }//GEN-LAST:event_btnSelecPersoMouseExited
 
     private void btnSelecPersoMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnSelecPersoMousePressed
@@ -681,40 +670,39 @@ public class selectPlayer extends javax.swing.JFrame {
     }//GEN-LAST:event_btnKimMouseReleased
 
     public static void main(String args[]) {
-        try{
+        try {
             JFrame frame = new JFrame("");
             Container fContainer = getContantPane();
-        frame.setTitle("Jogo do Vintão - " + VERSAO);
-        
-        fContainer.setBackground(Color.DARK_GRAY);
-        fContainer.setForeground(Color.WHITE);
-        Font font = Font.createFont(Font.TRUETYPE_FONT, selectPlayer.class.getResourceAsStream("SegoeUI-VF.ttf"));
-        fContainer.setFont(font.deriveFont(Font.PLAIN, 9f));
+            frame.setTitle("Jogo do Vintão - " + VERSAO);
+
+            fContainer.setBackground(Color.DARK_GRAY);
+            fContainer.setForeground(Color.WHITE);
+            Font font = Font.createFont(Font.TRUETYPE_FONT, selectPlayer.class.getResourceAsStream("SegoeUI-VF.ttf"));
+            fContainer.setFont(font.deriveFont(Font.PLAIN, 9f));
+        } catch (Exception e) {
         }
-        catch(Exception e)
-        {
-        }
-             
+
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 new selectPlayer().setVisible(true);
             }
         });
     }
-    public void selectPlayer(boolean player){
-        if(player == false ){
-           imgPlayer1.setEnabled(true);
-           lblPlayer1.setEnabled(true);
-           imgPlayer1.setVisible(true);
-           lblPlayer1.setVisible(true);
-        } else{
-           imgPlayer2.setEnabled(true);
-           lblPlayer2.setEnabled(true);
-           imgPlayer2.setVisible(true);
-           lblPlayer2.setVisible(true);
+
+    public void selectPlayer(boolean player) {
+        if (player == false) {
+            imgPlayer1.setEnabled(true);
+            lblPlayer1.setEnabled(true);
+            imgPlayer1.setVisible(true);
+            lblPlayer1.setVisible(true);
+        } else {
+            imgPlayer2.setEnabled(true);
+            lblPlayer2.setEnabled(true);
+            imgPlayer2.setVisible(true);
+            lblPlayer2.setVisible(true);
         }
     }
-    
+
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnBolsonaro;
     private javax.swing.JButton btnDilma;
@@ -734,4 +722,32 @@ public class selectPlayer extends javax.swing.JFrame {
     private javax.swing.JPanel telaLateral;
     private javax.swing.JPanel telaPrincipal;
     // End of variables declaration//GEN-END:variables
+
+    /**
+     * @return the firstPlayerSelected
+     */
+    public String getFirstPlayerSelected() {
+        return firstPlayerSelected;
+    }
+
+    /**
+     * @param firstPlayerSelected the firstPlayerSelected to set
+     */
+    public void setFirstPlayerSelected(String firstPlayerSelected) {
+        this.firstPlayerSelected = firstPlayerSelected;
+    }
+
+    /**
+     * @return the secondPlayerSelected
+     */
+    public String getSecondPlayerSelected() {
+        return secondPlayerSelected;
+    }
+
+    /**
+     * @param secondPlayerSelected the secondPlayerSelected to set
+     */
+    public void setSecondPlayerSelected(String secondPlayerSelected) {
+        this.secondPlayerSelected = secondPlayerSelected;
+    }
 }
