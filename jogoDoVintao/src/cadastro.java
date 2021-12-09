@@ -63,7 +63,7 @@ public class cadastro extends javax.swing.JFrame {
         idCadastro.setFont(new java.awt.Font("Segoe UI", 1, 36)); // NOI18N
         idCadastro.setForeground(new java.awt.Color(16, 69, 115));
         idCadastro.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/cadastroP1.png"))); // NOI18N
-        jPanel1.add(idCadastro, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 770, 100));
+        jPanel1.add(idCadastro, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 780, 100));
 
         lblTele.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         lblTele.setForeground(new java.awt.Color(16, 69, 115));

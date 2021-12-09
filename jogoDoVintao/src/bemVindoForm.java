@@ -68,7 +68,7 @@ public class bemVindoForm extends javax.swing.JFrame {
         jLabel3.setFont(new java.awt.Font("Segoe UI Black", 1, 24)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(79, 84, 87));
         jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel3.setText("CLIQUE NA MOEDA PARA VER AS INSTRUÕES");
+        jLabel3.setText("CLIQUE NA MOEDA PARA PROSSEGUIR");
 
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/bemVindo.png"))); // NOI18N
@@ -86,7 +86,7 @@ public class bemVindoForm extends javax.swing.JFrame {
                         .addGap(311, 311, 311))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                         .addComponent(jLabel3)
-                        .addGap(86, 86, 86))))
+                        .addGap(134, 134, 134))))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)

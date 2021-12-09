@@ -33,6 +33,14 @@ public class selectPlayer extends javax.swing.JFrame {
     public selectPlayer() {
         initComponents();
         setTitle("Jogo do Vintão - " + VERSAO);
+        imgPlayer1.setToolTipText("Só os grandes sábios e os grandes ignorantes são imutáveis");
+        imgPlayer2.setToolTipText("Todos nós somos ignorantes, só que em assuntos diferentes.");
+        btnBolsonaro.setToolTipText("<html>" + "- Amante do Paulo Guedes." + "<br />" + "- Anti-Vacina." + "<br />" + "- Histórico de Atleta." + "<br />" + "- Não pega gripezinha." + "<br />" + "- Rei da economia." + "</html>");
+        btnDilma.setToolTipText("<html>" + "- Dobra a meta." + "<br />" + "- Adora pastel de pombo." + "<br />" + "- Saldadora da mandioca." + "<br />" + "- Mestra do Ar." + "<br />" + "- Presidenta." + "</html>");
+        btnKim.setToolTipText("<html>" + "- Odeia diversidade." + "<br />" + "- Repudia o Trump." + "<br />" + "- Piromaníaco." + "<br />" + "- Ditador rebaixado." + "<br />" + "- Egocêntrico." + "</html>");
+        btnLula.setToolTipText("<html>" + "- Conta até 9." + "<br />" + "- Come calango de café da manhã." + "<br />" + "- Dedinho boomerang." + "<br />" + "- Persuasivo." + "<br />" + "- É um bom companheiro." + "</html>");
+        btnTemer.setToolTipText("<html>" + "- Doador universal." + "<br />" + "- Branco de neve." + "<br />" + "- Sanguessuga." + "<br />" + "- Medo do sol." + "<br />" + "- Odeia alho." + "</html>");
+        btnTrump.setToolTipText("<html>" + "- Tarado em muros." + "<br />" + "- Odeia o Kim." + "<br />" + "- Espirito vitorioso." + "<br />" + "- Idolo do Bostonaro." + "<br />" + "- Dono do prédinho." + "</html>");
         Container fContainer = getContentPane();
         fContainer.setBackground(Color.DARK_GRAY);
         fContainer.setForeground(Color.WHITE);
@@ -328,6 +336,7 @@ public class selectPlayer extends javax.swing.JFrame {
         telaPrincipal.add(imgPlayer2, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 150, 170, 220));
 
         imgPlayer1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/anonimoreformed.png"))); // NOI18N
+        imgPlayer1.setToolTipText("sadasd\nasdasdasd\nasdasdasdasdasdasdasd");
         telaPrincipal.add(imgPlayer1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 150, -1, 220));
 
         lblPlayer2.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
@@ -375,11 +384,14 @@ public class selectPlayer extends javax.swing.JFrame {
             setFirstPlayerSelected("lula");
             selectPlayer(player);
             setImg("/imgs/personagens/lula.png", 1);
+            //imgPlayer1.setToolTipText("<html>" + "sadasd" + "<br />" + "asdasdasda" + "<br />" + "sdasdasdasdasdasdasd" + "</html>");
+            imgPlayer1.setToolTipText("<html>" + "- Conta até 9." + "<br />" + "- Come calango de café da manhã." + "<br />" + "- Dedinho boomerang." + "<br />" + "- Persuasivo." + "<br />" + "- É um bom companheiro." + "</html>");
         } else {
             secondPlayerSelected = "lula";
             setSecondPlayerSelected("lula");
             selectPlayer(player);
             setImg("/imgs/personagens/lula.png", 2);
+            imgPlayer2.setToolTipText("<html>" + "- Conta até 9." + "<br />" + "- Come calango de café da manhã." + "<br />" + "- Dedinho boomerang." + "<br />" + "- Persuasivo." + "<br />" + "- É um bom companheiro." + "</html>");
         }
 
     }//GEN-LAST:event_btnLulaActionPerformed
@@ -411,11 +423,13 @@ public class selectPlayer extends javax.swing.JFrame {
             setFirstPlayerSelected("bozo");
             selectPlayer(player);
             setImg("/imgs/personagens/bolsonaro.png", 1);
+            imgPlayer1.setToolTipText("<html>" + "- Amante do Paulo Guedes." + "<br />" + "- Anti-Vacina." + "<br />" + "- Histórico de Atleta." + "<br />" + "- Não pega gripezinha." + "<br />" + "- Rei da economia." + "</html>");
         } else {
             secondPlayerSelected = "bozo";
             setSecondPlayerSelected("bozo");
             selectPlayer(player);
             setImg("/imgs/personagens/bolsonaro.png", 2);
+            imgPlayer2.setToolTipText("<html>" + "- Amante do Paulo Guedes." + "<br />" + "- Anti-Vacina." + "<br />" + "- Histórico de Atleta." + "<br />" + "- Não pega gripezinha." + "<br />" + "- Rei da economia." + "</html>");
         }
     }//GEN-LAST:event_btnBolsonaroActionPerformed
 
@@ -425,10 +439,12 @@ public class selectPlayer extends javax.swing.JFrame {
             setFirstPlayerSelected("dilma");
             selectPlayer(player);
             setImg("/imgs/personagens/dilma.png", 1);
+            imgPlayer1.setToolTipText("<html>" + "- Dobra a meta." + "<br />" + "- Adora pastel de pombo." + "<br />" + "- Saldadora da mandioca." + "<br />" + "- Mestra do Ar." + "<br />" + "- Presidenta." + "</html>");
         } else {
             setSecondPlayerSelected("dilma");
             selectPlayer(player);
             setImg("/imgs/personagens/dilma.png", 2);
+            imgPlayer2.setToolTipText("<html>" + "- Dobra a meta." + "<br />" + "- Adora pastel de pombo." + "<br />" + "- Saldadora da mandioca." + "<br />" + "- Mestra do Ar." + "<br />" + "- Presidenta." + "</html>");
         }
     }//GEN-LAST:event_btnDilmaActionPerformed
 
@@ -438,10 +454,12 @@ public class selectPlayer extends javax.swing.JFrame {
             setFirstPlayerSelected("temer");
             selectPlayer(player);
             setImg("/imgs/personagens/temer.png", 1);
+            imgPlayer1.setToolTipText("<html>" + "- Doador universal." + "<br />" + "- Branco de neve." + "<br />" + "- Sanguessuga." + "<br />" + "- Medo do sol." + "<br />" + "- Odeia alho." + "</html>");
         } else {
             setSecondPlayerSelected("temer");
             selectPlayer(player);
             setImg("/imgs/personagens/temer.png", 2);
+            imgPlayer2.setToolTipText("<html>" + "- Doador universal." + "<br />" + "- Branco de neve." + "<br />" + "- Sanguessuga." + "<br />" + "- Medo do sol." + "<br />" + "- Odeia alho." + "</html>");
         }
     }//GEN-LAST:event_btnTemerActionPerformed
 
@@ -450,10 +468,12 @@ public class selectPlayer extends javax.swing.JFrame {
             setFirstPlayerSelected("trump");
             selectPlayer(player);
             setImg("/imgs/personagens/trump.png", 1);
+            imgPlayer1.setToolTipText("<html>" + "- Tarado em muros." + "<br />" + "- Odeia o Kim." + "<br />" + "- Espirito vitorioso." + "<br />" + "- Idolo do Bostonaro." + "<br />" + "- Dono do prédinho." + "</html>");
         } else {
             setSecondPlayerSelected("trump");
             selectPlayer(player);
             setImg("/imgs/personagens/trump.png", 2);
+            imgPlayer2.setToolTipText("<html>" + "- Tarado em muros." + "<br />" + "- Odeia o Kim." + "<br />" + "- Espirito vitorioso." + "<br />" + "- Idolo do Bostonaro." + "<br />" + "- Dono do prédinho." + "</html>");
         }
     }//GEN-LAST:event_btnTrumpActionPerformed
 
@@ -462,10 +482,12 @@ public class selectPlayer extends javax.swing.JFrame {
             setFirstPlayerSelected("kim");
             selectPlayer(player);
             setImg("/imgs/personagens/kim.png", 1);
+            imgPlayer1.setToolTipText("<html>" + "- Odeia diversidade." + "<br />" + "- Repudia o Trump." + "<br />" + "- Piromaníaco." + "<br />" + "- Ditador rebaixado." + "<br />" + "- Egocêntrico." + "</html>");
         } else {
             setSecondPlayerSelected("kim");
             selectPlayer(player);
             setImg("/imgs/personagens/kim.png", 2);
+            imgPlayer2.setToolTipText("<html>" + "- Odeia diversidade." + "<br />" + "- Repudia o Trump." + "<br />" + "- Piromaníaco." + "<br />" + "- Ditador rebaixado." + "<br />" + "- Egocêntrico." + "</html>");
         }
     }//GEN-LAST:event_btnKimActionPerformed
 
