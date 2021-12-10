@@ -41,7 +41,6 @@ public static final String VERSAONOVA = "1";
         instruction1 = new javax.swing.JLabel();
         jPanel5 = new javax.swing.JPanel();
         instruction2 = new javax.swing.JLabel();
-        instruction5 = new javax.swing.JLabel();
         jPanel6 = new javax.swing.JPanel();
         instruction3 = new javax.swing.JLabel();
         instruction6 = new javax.swing.JLabel();
@@ -49,6 +48,7 @@ public static final String VERSAONOVA = "1";
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setResizable(false);
         setType(java.awt.Window.Type.POPUP);
 
         jPanel1.setBackground(new java.awt.Color(212, 215, 218));
@@ -62,7 +62,7 @@ public static final String VERSAONOVA = "1";
         instruction1.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         instruction1.setForeground(new java.awt.Color(255, 255, 255));
         instruction1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        instruction1.setText(" O jogo terá um total de 10 perguntas de conhecimento geral para cada jogador. ");
+        instruction1.setText(" O jogo terá um total de 5 perguntas sobre programação para cada jogador. ");
 
         javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
         jPanel4.setLayout(jPanel4Layout);
@@ -89,13 +89,7 @@ public static final String VERSAONOVA = "1";
         instruction2.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         instruction2.setForeground(new java.awt.Color(255, 255, 255));
         instruction2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        instruction2.setText("Cada jogador terá as habilidades de acordo com seu personagem, ");
-
-        instruction5.setBackground(new java.awt.Color(121, 122, 122));
-        instruction5.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        instruction5.setForeground(new java.awt.Color(255, 255, 255));
-        instruction5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        instruction5.setText("podendo solicitar ajuda em até 2 questões.");
+        instruction2.setText("Cada jogador terá apenas duas (2) vidas por jogo. ");
 
         javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
         jPanel5.setLayout(jPanel5Layout);
@@ -104,20 +98,15 @@ public static final String VERSAONOVA = "1";
             .addGroup(jPanel5Layout.createSequentialGroup()
                 .addGap(0, 0, Short.MAX_VALUE)
                 .addComponent(instruction2, javax.swing.GroupLayout.PREFERRED_SIZE, 770, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel5Layout.createSequentialGroup()
-                .addComponent(instruction5, javax.swing.GroupLayout.PREFERRED_SIZE, 770, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
         );
         jPanel5Layout.setVerticalGroup(
             jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel5Layout.createSequentialGroup()
-                .addComponent(instruction2)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(instruction5)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addComponent(instruction2, javax.swing.GroupLayout.DEFAULT_SIZE, 34, Short.MAX_VALUE)
+                .addContainerGap())
         );
 
-        jPanel1.add(jPanel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, 200, 760, -1));
+        jPanel1.add(jPanel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, 200, 760, 40));
 
         jPanel6.setBackground(new java.awt.Color(145, 153, 163));
 
@@ -157,7 +146,7 @@ public static final String VERSAONOVA = "1";
                 .addContainerGap(8, Short.MAX_VALUE))
         );
 
-        jPanel1.add(jPanel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 280, 750, 70));
+        jPanel1.add(jPanel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 260, 750, 70));
 
         playButton.setBackground(new java.awt.Color(212, 215, 218));
         playButton.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
@@ -198,9 +187,7 @@ public static final String VERSAONOVA = "1";
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 746, Short.MAX_VALUE)
-                .addContainerGap())
+            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 746, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -279,7 +266,6 @@ public static final String VERSAONOVA = "1";
     private javax.swing.JLabel instruction1;
     private javax.swing.JLabel instruction2;
     private javax.swing.JLabel instruction3;
-    private javax.swing.JLabel instruction5;
     private javax.swing.JLabel instruction6;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
