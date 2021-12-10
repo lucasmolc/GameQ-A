@@ -14,22 +14,34 @@ import javax.swing.border.Border;
  */
 public class campeao extends javax.swing.JFrame {
 
+    public boolean vencedor;
+    
     public campeao() {
         initComponents();
-        setImg("/imgs/personagens/dilma.png", "");
-        lblPlayerWinner.setToolTipText("Vamos saldar a mandioca!!");
-        ImageIcon next = new ImageIcon(getClass().getResource("/imgs/player1.png"));
-        lblWinner.setIcon(next);
+        perguntas fPerguntas = new perguntas();
+        if (fPerguntas.acertos[0] > fPerguntas.acertos[1])
+            vencedor = false;
+        else
+            vencedor = true;
+        
+        if (vencedor = false) {
+            lblPlayerWinner.setIcon(selectPlayer.firstPlayerSelected);
+            setImg("/imgs/player1.png");
+        } else {
+            lblPlayerWinner.setIcon(selectPlayer.secondPlayerSelected);
+            setImg("/imgs/player2.png");
+        }
+        
         Border bordaVazia = BorderFactory.createEmptyBorder();
         btnFinish.setBorder(bordaVazia);
         btnFinish.setOpaque(false);
         btnFinish.setContentAreaFilled(false);
         btnFinish.setBorderPainted(false);
     }
-
-    private void setImg(String path, String label) {
+    
+    private void setImg(String path) {
         ImageIcon image = new ImageIcon(getClass().getResource(path));
-        lblPlayerWinner.setIcon(image);
+        lblWinner.setIcon(image);
     }
     
     @SuppressWarnings("unchecked")

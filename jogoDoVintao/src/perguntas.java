@@ -2,6 +2,7 @@
 import java.util.Arrays;
 import java.lang.reflect.Array;
 import java.util.ArrayList;
+import javax.swing.Icon;
 import java.util.Random;
 import javax.swing.BorderFactory;
 import javax.swing.ImageIcon;
@@ -19,7 +20,7 @@ public class perguntas extends javax.swing.JFrame {
 
     public perguntas() {
         initComponents();
-        setImg("/imgs/personagens/dilma.png");
+        lblPlayer.setIcon(selectPlayer.firstPlayerSelected);
 
         Border bordaVazia = BorderFactory.createEmptyBorder();
         nextQuestion.setBorder(bordaVazia);
@@ -28,66 +29,66 @@ public class perguntas extends javax.swing.JFrame {
         nextQuestion.setBorderPainted(false);
 
         perguntas = new ArrayList<Pergunta>(Arrays.asList(
-                new Pergunta("Quais são as fases da Lua?",
+                new Pergunta("Quais dois valores uma variável booliana pode ter?",
                         new ArrayList<Alternativa>(Arrays.asList(
-                                new Alternativa("Nova, cheia e superlua", false),
-                                new Alternativa("Penumbral, lunar parcial, lunar total e cheia", false),
-                                new Alternativa("Nova, cheia, minguante e lua de sangue", false),
-                                new Alternativa("Nova, crescente, cheia e minguante", true)))),
-                new Pergunta("Quantos ossos temos no nosso corpo?",
+                                new Alternativa("Operadores aritméticos e lógicos", false),
+                                new Alternativa("Números e caracteres", false),
+                                new Alternativa("Operadores relacionais e lógicos", false),
+                                new Alternativa("Verdadeiro e falso", true)))),
+                new Pergunta("Na instanciação 'Conta primeiraConta = New Conta();' primeiraConta é:",
                         new ArrayList<Alternativa>(Arrays.asList(
-                                new Alternativa("126", false),
-                                new Alternativa("18", false),
-                                new Alternativa("206", true),
-                                new Alternativa("300", false)))),
-                new Pergunta("Qual o planeta mais próximo do Sol?",
+                                new Alternativa("Uma Classe", false),
+                                new Alternativa("Uma referencia a uma instância de objeto", true),
+                                new Alternativa("Um objeto", false),
+                                new Alternativa("Um método", false)))),
+                new Pergunta("<html>" + "Essa palavra-chave é usada para instruir código específico quando" + "<br />" + "a entrada de uma instrução switch não corresponde a nenhum desses casos." + "</html>",
                         new ArrayList<Alternativa>(Arrays.asList(
-                                new Alternativa("Netuno", false),
-                                new Alternativa("Júpiter", false),
-                                new Alternativa("Mercúrio", true),
-                                new Alternativa("Terra", false)))),
-                new Pergunta("Qual a maior floresta tropical do mundo?",
+                                new Alternativa("Switch", false),
+                                new Alternativa("Case", false),
+                                new Alternativa("Default", true),
+                                new Alternativa("Break", false)))),
+                new Pergunta("<html>" + "Temos uma classe chamada Employee, quando instanciamos uma referência" + "<br />" + "a um objeto, qual será a instanciação?" + "</html>",
                         new ArrayList<Alternativa>(Arrays.asList(
-                                new Alternativa("Mata Atlântica", false),
-                                new Alternativa("Pampas", false),
-                                new Alternativa("Floresta Amazônica", true),
-                                new Alternativa("Pantanal", false)))),
-                new Pergunta("Qual o monumento famoso pela sua inclinação?",
+                                new Alternativa("New Employee ();", false),
+                                new Alternativa("new Employee();", false),
+                                new Alternativa("Employee empregado = new Employee();", true),
+                                new Alternativa("Employee empregado = new;", false)))),
+                new Pergunta("<html>" + "Qual operador você usa para chamar um método de" + "<br />" + "construtor de objeto e criar um novo objeto?" + "</html>",
                         new ArrayList<Alternativa>(Arrays.asList(
-                                new Alternativa("Torre Eiffel", false),
-                                new Alternativa("Torre de Pisa", true),
-                                new Alternativa(" Esfinge", false),
-                                new Alternativa("Estátua da Liberdade", false)))),
-                new Pergunta("Quem pintou Mona Lisa?",
+                                new Alternativa("classe", false),
+                                new Alternativa("new", true),
+                                new Alternativa("instanceOf", false),
+                                new Alternativa("scanner", false)))),
+                new Pergunta("Os quatro pilares do paradigma de Orientação a Objetos são:",
                         new ArrayList<Alternativa>(Arrays.asList(
-                                new Alternativa("Leonardo da Vinci", true),
-                                new Alternativa("Van Gogh", false),
-                                new Alternativa("Salvador Dalí", false),
-                                new Alternativa("Tarsila do Amaral", false)))),
-                new Pergunta("O que representam os cinco anéis olímpicos?",
+                                new Alternativa("Abstração, Encapsulamento, Herança e Polimorfismo.", true),
+                                new Alternativa("Classes, Atributos, Métodos e Abstração.", false),
+                                new Alternativa("Herança, Polimorfismo, Classes e Objetos.", false),
+                                new Alternativa("Sequenciamento, Procedimentos, Bibliotecas e Herança.", false)))),
+                new Pergunta("Quantos são os modificadores de visibilidade?",
                         new ArrayList<Alternativa>(Arrays.asList(
-                                new Alternativa("As argolas da ginástica artística.", false),
-                                new Alternativa(" As partes do mundo unidas pelo Olimpismo.", true),
-                                new Alternativa("Cinco tipos de esporte: de rede, de campo, de combate, de precisão, de invasão.", false),
-                                new Alternativa("Cinco deuses do Olimpo: Zeus, Atena, Apolo, Dionísio e Hermes.", false)))),
-                new Pergunta("As pessoas de qual tipo sanguíneo são consideradas doadores universais?",
+                                new Alternativa("5", false),
+                                new Alternativa("3", true),
+                                new Alternativa("2", false),
+                                new Alternativa("1", false)))),
+                new Pergunta("Qual dessas pessoas é considerado o pai do conceito de orientação a objetos?",
                         new ArrayList<Alternativa>(Arrays.asList(
-                                new Alternativa("Tipo A", false),
-                                new Alternativa("Tipo B", false),
-                                new Alternativa("Tipo O", true),
-                                new Alternativa("Tipo AB", false)))),
-                new Pergunta("Em que século o continente europeu foi devastado pela peste bubônica?",
+                                new Alternativa("Alan Kay", true),
+                                new Alternativa("Dennis Ritchie", false),
+                                new Alternativa("Bill Gates", false),
+                                new Alternativa("Bjarne Stroustrup", false)))),
+                new Pergunta("Os três operadores lógicos no Java são:",
                         new ArrayList<Alternativa>(Arrays.asList(
-                                new Alternativa("No século X", false),
-                                new Alternativa("No século XI", false),
-                                new Alternativa("No século XII", false),
-                                new Alternativa("No século XIV", true)))),
-                new Pergunta("Quantos graus são necessários para que dois ângulos sejam complementares?",
+                                new Alternativa("&&, != ,=", false),
+                                new Alternativa("!=, =, ==", false),
+                                new Alternativa("&, |, =", false),
+                                new Alternativa("&&, ||, !", true)))),
+                new Pergunta("<html>" + "No Java, a classe que implementa uma lista ordenada" + "<br />" + "que permite a inclusão de elementos nulos (null) é:" + "</html>",
                         new ArrayList<Alternativa>(Arrays.asList(
-                                new Alternativa("45", false),
-                                new Alternativa("60", false),
-                                new Alternativa("90", true),
-                                new Alternativa("180", false))))
+                                new Alternativa("List", false),
+                                new Alternativa("HashMap", false),
+                                new Alternativa("ArrayList", true),
+                                new Alternativa("HashSet", false))))
         ));
         proxQuestao();
     }
@@ -225,27 +226,8 @@ public class perguntas extends javax.swing.JFrame {
         nextQuestion.setIcon(next);
     }//GEN-LAST:event_nextQuestionMouseReleased
 
-    public void selectPlayerImage(String playerName) {
-        switch (playerName) {
-            case "lula":
-                setImg("/imgs/personagens/lula.png");
-                break;
-            case "dilma":
-                setImg("/imgs/personagens/dilma.png");
-                break;
-            case "bozo":
-                setImg("/imgs/personagens/bolsonaro.png");
-                break;
-            case "temer":
-                setImg("/imgs/personagens/temer.png");
-                break;
-            case "trump":
-                setImg("/imgs/personagens/trump.png");
-                break;
-            case "kim":
-                setImg("/imgs/personagens/kim.png");
-                break;
-        }
+    public void selectPlayerImage(Icon player) {
+        lblPlayer.setIcon(player);
     }
 
     public void desmarcaOption() {
@@ -263,31 +245,23 @@ public class perguntas extends javax.swing.JFrame {
 
     private void nextQuestionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nextQuestionActionPerformed
         if (gPos < 4) {
-            /*selectPlayer player = new selectPlayer();
-            showMessageDialog(null, "Tela principal: " + player.firstPlayerSelected);
-            selectPlayerImage(player.getFirstPlayerSelected());*/
             if (verificaSelected()) {
-            for (int i = 0; i < 4; i++) {
-                desmarcaOption();
-                selectPlayerImage("dilma");
-                lblPlayer.setToolTipText("Pombinho gostoso");
-                Pergunta atual = perguntas.get(pergAtual);
-                if (true == atual.alternativas.get(pergAtual).status) {
-                    acertos[0] += 1;
+                for (int i = 0; i < 4; i++) {
+                    desmarcaOption();
+                    selectPlayerImage(selectPlayer.firstPlayerSelected);
+                    Pergunta atual = perguntas.get(pergAtual);
+                    if (true == atual.alternativas.get(pergAtual).status) {
+                        acertos[0] += 1;
+                    }
+                    proxQuestao();
                 }
-                proxQuestao();
             }
-        }
             gPos++;
         } else if (gPos >= 4 && gPos < 9) {
-            /*selectPlayer player = new selectPlayer();
-            showMessageDialog(null, "Tela principal: " + player.getFirstPlayerSelected());
-            selectPlayerImage(player.getSecondPlayerSelected());*/
             if (verificaSelected()) {
                 for (int i = 4; i >= 0; i--) {
                     desmarcaOption();
-                    selectPlayerImage("bozo");
-                    lblPlayer.setToolTipText("Tá ok!?");
+                    selectPlayerImage(selectPlayer.secondPlayerSelected);
                     Pergunta atual = perguntas.get(pergAtual);
                     if (true == atual.alternativas.get(pergAtual).status) {
                         acertos[1] += 1;

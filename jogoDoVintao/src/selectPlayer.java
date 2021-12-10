@@ -5,6 +5,7 @@
  */
 
 import javax.swing.JFrame;
+import javax.swing.Icon;
 import java.awt.*;
 import javax.swing.ImageIcon;
 import static javax.swing.JOptionPane.showMessageDialog;
@@ -19,8 +20,8 @@ public class selectPlayer extends javax.swing.JFrame {
     public static final String VERSAONOVA = "1";
     public static final String VERSAO = "v" + VERSAONOVA + " 26/11/2021";
     public boolean player = false;
-    public String firstPlayerSelected = "";
-    public String secondPlayerSelected = "";
+    public static Icon firstPlayerSelected;
+    public static Icon secondPlayerSelected;
 
     public static Container getContantPane() {
         throw new UnsupportedOperationException("Not supported yet.");
@@ -65,13 +66,14 @@ public class selectPlayer extends javax.swing.JFrame {
     }
 
     private void setImg(String path, int btn) {
-        ImageIcon image = new ImageIcon(
-                getClass().getResource(path));
+        ImageIcon image = new ImageIcon(getClass().getResource(path));
 
         if (btn == 1) {
             imgPlayer1.setIcon(image);
+            firstPlayerSelected = image;
         } else {
             imgPlayer2.setIcon(image);
+            secondPlayerSelected = image;
         }
 
     }
@@ -370,7 +372,7 @@ public class selectPlayer extends javax.swing.JFrame {
 
 
     private void btnPlayActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPlayActionPerformed
-        if (getSecondPlayerSelected() == null || getSecondPlayerSelected() == "") {
+        if (secondPlayerSelected == null) {
             showMessageDialog(null, "Necessário selecionar os 2 personagens!");
         } else {
             new perguntas().setVisible(true);
@@ -380,15 +382,10 @@ public class selectPlayer extends javax.swing.JFrame {
 
     private void btnLulaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLulaActionPerformed
         if (player == false) {
-            firstPlayerSelected = "lula";
-            setFirstPlayerSelected("lula");
             selectPlayer(player);
             setImg("/imgs/personagens/lula.png", 1);
-            //imgPlayer1.setToolTipText("<html>" + "sadasd" + "<br />" + "asdasdasda" + "<br />" + "sdasdasdasdasdasdasd" + "</html>");
             imgPlayer1.setToolTipText("<html>" + "- Conta até 9." + "<br />" + "- Come calango de café da manhã." + "<br />" + "- Dedinho boomerang." + "<br />" + "- Persuasivo." + "<br />" + "- É um bom companheiro." + "</html>");
         } else {
-            secondPlayerSelected = "lula";
-            setSecondPlayerSelected("lula");
             selectPlayer(player);
             setImg("/imgs/personagens/lula.png", 2);
             imgPlayer2.setToolTipText("<html>" + "- Conta até 9." + "<br />" + "- Come calango de café da manhã." + "<br />" + "- Dedinho boomerang." + "<br />" + "- Persuasivo." + "<br />" + "- É um bom companheiro." + "</html>");
@@ -398,9 +395,9 @@ public class selectPlayer extends javax.swing.JFrame {
 
     private void btnSelecPersoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSelecPersoActionPerformed
 
-        if ((getFirstPlayerSelected() == null || getFirstPlayerSelected() == "") && (getSecondPlayerSelected() == null || getSecondPlayerSelected() == "")) {
+        if ((firstPlayerSelected == null) && (secondPlayerSelected == null)) {
             showMessageDialog(null, "Necessário selecionar os 2 personagens!");
-        } else if (getFirstPlayerSelected() != null && getFirstPlayerSelected() != "") {
+        } else if (firstPlayerSelected != null) {
             if (player == true) {
                 btnBolsonaro.setEnabled(false);
                 btnDilma.setEnabled(false);
@@ -419,14 +416,10 @@ public class selectPlayer extends javax.swing.JFrame {
 
     private void btnBolsonaroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBolsonaroActionPerformed
         if (player == false) {
-            firstPlayerSelected = "bozo";
-            setFirstPlayerSelected("bozo");
             selectPlayer(player);
             setImg("/imgs/personagens/bolsonaro.png", 1);
             imgPlayer1.setToolTipText("<html>" + "- Amante do Paulo Guedes." + "<br />" + "- Anti-Vacina." + "<br />" + "- Histórico de Atleta." + "<br />" + "- Não pega gripezinha." + "<br />" + "- Rei da economia." + "</html>");
         } else {
-            secondPlayerSelected = "bozo";
-            setSecondPlayerSelected("bozo");
             selectPlayer(player);
             setImg("/imgs/personagens/bolsonaro.png", 2);
             imgPlayer2.setToolTipText("<html>" + "- Amante do Paulo Guedes." + "<br />" + "- Anti-Vacina." + "<br />" + "- Histórico de Atleta." + "<br />" + "- Não pega gripezinha." + "<br />" + "- Rei da economia." + "</html>");
@@ -436,12 +429,10 @@ public class selectPlayer extends javax.swing.JFrame {
 
     private void btnDilmaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDilmaActionPerformed
         if (player == false) {
-            setFirstPlayerSelected("dilma");
             selectPlayer(player);
             setImg("/imgs/personagens/dilma.png", 1);
             imgPlayer1.setToolTipText("<html>" + "- Dobra a meta." + "<br />" + "- Adora pastel de pombo." + "<br />" + "- Saldadora da mandioca." + "<br />" + "- Mestra do Ar." + "<br />" + "- Presidenta." + "</html>");
         } else {
-            setSecondPlayerSelected("dilma");
             selectPlayer(player);
             setImg("/imgs/personagens/dilma.png", 2);
             imgPlayer2.setToolTipText("<html>" + "- Dobra a meta." + "<br />" + "- Adora pastel de pombo." + "<br />" + "- Saldadora da mandioca." + "<br />" + "- Mestra do Ar." + "<br />" + "- Presidenta." + "</html>");
@@ -451,12 +442,10 @@ public class selectPlayer extends javax.swing.JFrame {
 
     private void btnTemerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnTemerActionPerformed
         if (player == false) {
-            setFirstPlayerSelected("temer");
             selectPlayer(player);
             setImg("/imgs/personagens/temer.png", 1);
             imgPlayer1.setToolTipText("<html>" + "- Doador universal." + "<br />" + "- Branco de neve." + "<br />" + "- Sanguessuga." + "<br />" + "- Medo do sol." + "<br />" + "- Odeia alho." + "</html>");
         } else {
-            setSecondPlayerSelected("temer");
             selectPlayer(player);
             setImg("/imgs/personagens/temer.png", 2);
             imgPlayer2.setToolTipText("<html>" + "- Doador universal." + "<br />" + "- Branco de neve." + "<br />" + "- Sanguessuga." + "<br />" + "- Medo do sol." + "<br />" + "- Odeia alho." + "</html>");
@@ -465,12 +454,10 @@ public class selectPlayer extends javax.swing.JFrame {
 
     private void btnTrumpActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnTrumpActionPerformed
         if (player == false) {
-            setFirstPlayerSelected("trump");
             selectPlayer(player);
             setImg("/imgs/personagens/trump.png", 1);
             imgPlayer1.setToolTipText("<html>" + "- Tarado em muros." + "<br />" + "- Odeia o Kim." + "<br />" + "- Espirito vitorioso." + "<br />" + "- Idolo do Bostonaro." + "<br />" + "- Dono do prédinho." + "</html>");
         } else {
-            setSecondPlayerSelected("trump");
             selectPlayer(player);
             setImg("/imgs/personagens/trump.png", 2);
             imgPlayer2.setToolTipText("<html>" + "- Tarado em muros." + "<br />" + "- Odeia o Kim." + "<br />" + "- Espirito vitorioso." + "<br />" + "- Idolo do Bostonaro." + "<br />" + "- Dono do prédinho." + "</html>");
@@ -479,12 +466,10 @@ public class selectPlayer extends javax.swing.JFrame {
 
     private void btnKimActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnKimActionPerformed
         if (player == false) {
-            setFirstPlayerSelected("kim");
             selectPlayer(player);
             setImg("/imgs/personagens/kim.png", 1);
             imgPlayer1.setToolTipText("<html>" + "- Odeia diversidade." + "<br />" + "- Repudia o Trump." + "<br />" + "- Piromaníaco." + "<br />" + "- Ditador rebaixado." + "<br />" + "- Egocêntrico." + "</html>");
         } else {
-            setSecondPlayerSelected("kim");
             selectPlayer(player);
             setImg("/imgs/personagens/kim.png", 2);
             imgPlayer2.setToolTipText("<html>" + "- Odeia diversidade." + "<br />" + "- Repudia o Trump." + "<br />" + "- Piromaníaco." + "<br />" + "- Ditador rebaixado." + "<br />" + "- Egocêntrico." + "</html>");
@@ -745,31 +730,4 @@ public class selectPlayer extends javax.swing.JFrame {
     private javax.swing.JPanel telaPrincipal;
     // End of variables declaration//GEN-END:variables
 
-    /**
-     * @return the firstPlayerSelected
-     */
-    public String getFirstPlayerSelected() {
-        return firstPlayerSelected;
-    }
-
-    /**
-     * @param firstPlayerSelected the firstPlayerSelected to set
-     */
-    public void setFirstPlayerSelected(String firstPlayerSelected) {
-        this.firstPlayerSelected = firstPlayerSelected;
-    }
-
-    /**
-     * @return the secondPlayerSelected
-     */
-    public String getSecondPlayerSelected() {
-        return secondPlayerSelected;
-    }
-
-    /**
-     * @param secondPlayerSelected the secondPlayerSelected to set
-     */
-    public void setSecondPlayerSelected(String secondPlayerSelected) {
-        this.secondPlayerSelected = secondPlayerSelected;
-    }
 }
