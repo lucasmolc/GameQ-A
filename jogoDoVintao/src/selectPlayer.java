@@ -33,7 +33,7 @@ public class selectPlayer extends javax.swing.JFrame {
 
     public selectPlayer() {
         initComponents();
-        setTitle("Jogo do Vintão - " + VERSAO);
+        //setTitle("Jogo do Vintão - " + VERSAO);
         imgPlayer1.setToolTipText("Só os grandes sábios e os grandes ignorantes são imutáveis");
         imgPlayer2.setToolTipText("Todos nós somos ignorantes, só que em assuntos diferentes.");
         btnBolsonaro.setToolTipText("<html>" + "- Amante do Paulo Guedes." + "<br />" + "- Anti-Vacina." + "<br />" + "- Histórico de Atleta." + "<br />" + "- Não pega gripezinha." + "<br />" + "- Rei da economia." + "</html>");
@@ -141,7 +141,7 @@ public class selectPlayer extends javax.swing.JFrame {
         lblSelecione.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/selectP1.png"))); // NOI18N
         telaLateral.add(lblSelecione, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 20, 200, -1));
 
-        btnLula.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/lulaButton.png"))); // NOI18N
+        btnLula.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/personagens/lulaButton.png"))); // NOI18N
         btnLula.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 btnLulaMouseClicked(evt);
@@ -166,7 +166,7 @@ public class selectPlayer extends javax.swing.JFrame {
         });
         telaLateral.add(btnLula, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 110, 90, 50));
 
-        btnBolsonaro.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/jairButtons.png"))); // NOI18N
+        btnBolsonaro.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/personagens/jairButtons.png"))); // NOI18N
         btnBolsonaro.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 btnBolsonaroMouseClicked(evt);
@@ -191,7 +191,7 @@ public class selectPlayer extends javax.swing.JFrame {
         });
         telaLateral.add(btnBolsonaro, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 110, 90, 50));
 
-        btnDilma.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/dilmaButton.png"))); // NOI18N
+        btnDilma.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/personagens/dilmaButton.png"))); // NOI18N
         btnDilma.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 btnDilmaMouseClicked(evt);
@@ -216,7 +216,7 @@ public class selectPlayer extends javax.swing.JFrame {
         });
         telaLateral.add(btnDilma, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 170, 90, 50));
 
-        btnTemer.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/temerButton.png"))); // NOI18N
+        btnTemer.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/personagens/temerButton.png"))); // NOI18N
         btnTemer.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 btnTemerMouseClicked(evt);
@@ -241,7 +241,7 @@ public class selectPlayer extends javax.swing.JFrame {
         });
         telaLateral.add(btnTemer, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 170, 90, 50));
 
-        btnTrump.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/trumpButton.png"))); // NOI18N
+        btnTrump.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/personagens/trumpButton.png"))); // NOI18N
         btnTrump.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 btnTrumpMouseClicked(evt);
@@ -266,7 +266,7 @@ public class selectPlayer extends javax.swing.JFrame {
         });
         telaLateral.add(btnTrump, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 230, 90, 50));
 
-        btnKim.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/kimButton.png"))); // NOI18N
+        btnKim.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/personagens/kimButton.png"))); // NOI18N
         btnKim.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 btnKimMouseClicked(evt);

@@ -116,7 +116,7 @@
         <Component class="javax.swing.JButton" name="btnLula">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/imgs/lulaButton.png"/>
+              <Image iconType="3" name="/imgs/personagens/lulaButton.png"/>
             </Property>
           </Properties>
           <Events>
@@ -136,7 +136,7 @@
         <Component class="javax.swing.JButton" name="btnBolsonaro">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/imgs/jairButtons.png"/>
+              <Image iconType="3" name="/imgs/personagens/jairButtons.png"/>
             </Property>
           </Properties>
           <Events>
@@ -156,7 +156,7 @@
         <Component class="javax.swing.JButton" name="btnDilma">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/imgs/dilmaButton.png"/>
+              <Image iconType="3" name="/imgs/personagens/dilmaButton.png"/>
             </Property>
           </Properties>
           <Events>
@@ -176,7 +176,7 @@
         <Component class="javax.swing.JButton" name="btnTemer">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/imgs/temerButton.png"/>
+              <Image iconType="3" name="/imgs/personagens/temerButton.png"/>
             </Property>
           </Properties>
           <Events>
@@ -196,7 +196,7 @@
         <Component class="javax.swing.JButton" name="btnTrump">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/imgs/trumpButton.png"/>
+              <Image iconType="3" name="/imgs/personagens/trumpButton.png"/>
             </Property>
           </Properties>
           <Events>
@@ -216,7 +216,7 @@
         <Component class="javax.swing.JButton" name="btnKim">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/imgs/kimButton.png"/>
+              <Image iconType="3" name="/imgs/personagens/kimButton.png"/>
             </Property>
           </Properties>
           <Events>
